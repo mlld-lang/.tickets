@@ -6,6 +6,7 @@ links: []
 created: 2026-01-14T20:06:06.882555-08:00
 type: task
 priority: 2
+tags: [stale-check-9]
 parent: mlld-su55
 ---
 # D2: Publish verification for capability declarations

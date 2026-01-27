@@ -1,63 +1,55 @@
 ---
 id: mlld-ezuw
-status: open
+status: done
 deps: []
 links: []
 created: 2026-01-11T16:34:41.902442-08:00
 type: task
 priority: 2
+resolved: 2026-01-25
 ---
 # Ternary operator doesn't work in let assignments inside exe blocks
 
-**Problem**: Can't use ternary operator `? :` for conditional assignment in `let` statements inside exe blocks.
+**RESOLVED**: Fixed in envsec branch.
 
-**Fails**:
+## Fix Summary
+
+Three changes were needed:
+
+1. **Grammar: TernaryBranch** (`grammar/base/unified-expressions.peggy`)
+   - Added `CodeExecution` to `TernaryBranch` so `cmd {...}`, `js {...}`, `sh {...}`, etc. can be used in ternary branches
+
+2. **Grammar: DataPropertyValue** (`grammar/patterns/data-values.peggy`)
+   - Added `ExpressionWithOperator` to allow ternary expressions in object literal values
+   - Moved `DataStringValue` before `ExpressionWithOperator` to prevent `!` in strings from matching operator lookahead
+
+3. **Interpreter: node type handlers** (`interpreter/core/interpreter.ts`)
+   - Added handler for `type === 'code'` nodes (js, sh, python, etc.)
+   - Fixed `type === 'command'` handler to always execute commands (removed incorrect `hasRunKeyword` check)
+
+## Original Problem
+
+Can't use ternary operator `? :` for conditional assignment in `let` statements inside exe blocks.
+
+**Now works**:
 ```mlld
 exe @process(filter) = [
   let @tiers = @filter ? @filter.split(",") : []
-  >> Parse error on the '?'
   => @tiers
 ]
 ```
 
-**Also fails with when first**:
+Also works in for blocks:
 ```mlld
-exe @process(filter) = [
-  let @tiers = when first [
-    @filter => @filter.split(",")
-    * => []
-  ]
-  >> Parse error - when first not allowed in let RHS
-  => @tiers
+var @results = for @i in [1,2,3] [
+  let @x = @i == 2 ? "two" : cmd {echo "not two"}
+  => @x
 ]
 ```
 
-**Workarounds**:
-
-1. Define helper exe outside:
+And in object literals:
 ```mlld
-exe @getTiers(f) = when first [
-  @f => @f.split(",")
-  * => @empty
-]
-exe @process(filter) = [
-  let @tiers = @getTiers(@filter)
-  => @tiers
-]
+var @obj = { a: @b ? @b : @c }
 ```
-
-2. Move all logic to return:
-```mlld
-exe @process(filter) = when first [
-  @filter => @filter.split(",")
-  * => []
-]
-```
-
-**Impact**: Can't build up intermediate conditional values inside exe blocks. Forces either helper functions or restructuring logic.
-
-**Grammar investigation**: ExeBlockStatement's let assignment RHS may have a restricted expression grammar that doesn't include TernaryExpression or WhenExpression.
-
-**Discovered in**: qa.mld refactoring - tried to conditionally parse tier filter inside exe block.
 
 

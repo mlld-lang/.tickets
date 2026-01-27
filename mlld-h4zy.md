@@ -1,6 +1,6 @@
 ---
 id: mlld-h4zy
-status: open
+status: closed
 deps: [mlld-794g]
 links: []
 created: 2026-01-23T07:51:06.663861-08:00
@@ -75,6 +75,6 @@ env @agentEnv(@devTools) [ ... ]
 mlld-4z2w
 
 ## Depends On
-mlld-ixw4-a (Phase 2b-1: Tool filtering)
+mlld-794g (Phase 2b-1: Tool filtering in MCPServer)
 
 

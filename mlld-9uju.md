@@ -1,6 +1,6 @@
 ---
 id: mlld-9uju
-status: open
+status: closed
 deps: [mlld-mw2x]
 links: []
 created: 2026-01-22T16:28:30.508271-08:00
@@ -75,6 +75,8 @@ interface ToolCollection {
 
 - [ ] `var tools @x = {...}` parses
 - [ ] Tool definitions validated (mlld refs resolve)
+- [ ] `bind` field validated (keys must be valid param names of referenced exe)
+- [ ] `expose` field validated (values must be valid param names of referenced exe)
 - [ ] ToolCollection type created and populated
 - [ ] Test: create tool collection, inspect structure
 
