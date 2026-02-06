@@ -1,11 +1,13 @@
 ---
 id: mlld-s4a
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-10T22:57:01.302139-08:00
 type: bug
 priority: 2
+tags: [stale-check-10]
+updated: 2026-01-30T11:59:09Z
 ---
 # npm run test:case shows all tests skipped instead of running specified test
 

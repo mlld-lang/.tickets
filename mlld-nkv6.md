@@ -1,11 +1,13 @@
 ---
 id: mlld-nkv6
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T16:34:27.189285-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-m, risk-m, impl-none]
+updated: 2026-01-31T09:59:15Z
 ---
 # Destructured @payload import fails when fields don't exist
 
@@ -38,3 +40,5 @@ var @tier = @p.tier ? @p.tier : ""
 **Discovered in**: qa.mld refactoring - tried cleaner destructured import syntax.
 
 
+
+**2026-01-31 09:59 UTC:** Fixed: Destructured imports from @payload and @state now allow missing fields, setting them to null instead of throwing an error. This enables cleaner syntax like 'import { @topic, @tier } from @payload' where not all fields are required. Tests added in tests/sdk/dynamic-modules.test.ts.

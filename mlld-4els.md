@@ -6,6 +6,7 @@ links: []
 created: 2026-01-04T13:54:23.811618-08:00
 type: bug
 priority: 3
+tags: [size-m, complexity-l, risk-l, impl-none]
 ---
 # Grammar: for block with inline => multiline template fails to parse
 

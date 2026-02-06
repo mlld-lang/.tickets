@@ -6,6 +6,7 @@ links: []
 created: 2025-12-18T10:21:10.33158-08:00
 type: feature
 priority: 2
+tags: [size-l, complexity-l, risk-l, impl-none]
 ---
 # MCP: Inline server orchestration with /mcp directive
 

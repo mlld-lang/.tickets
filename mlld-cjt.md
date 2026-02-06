@@ -1,11 +1,13 @@
 ---
 id: mlld-cjt
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-11T09:02:59.292539-08:00
 type: task
 priority: 2
+tags: [size-m, complexity-m, risk-l, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Consider removing prettyprint default
 

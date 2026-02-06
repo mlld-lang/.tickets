@@ -1,12 +1,14 @@
 ---
 id: mlld-9oyx
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-18T11:29:46.776675-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-s, risk-s, impl-none]
 parent: mlld-si08
+updated: 2026-01-31T09:47:28Z
 ---
 # Capture skills and support local vs global config selection
 
@@ -59,3 +61,12 @@ Support `.codex/` and `~/.codex/` following same pattern.
 - mlld-env-proposal.md
 
 
+
+**2026-01-31 09:47 UTC:** Implemented all features:
+- skills/ directory is now copied during capture
+- --local flag captures from project .claude/ instead of ~/.claude/
+- --codex flag captures from .codex/ config (global by default, --local for project)
+- --global flag stores environment in ~/.mlld/env/ instead of project .mlld/env/
+- Updated help text to document new options
+- Added tests for all new functionality
+- Build passes, all tests pass

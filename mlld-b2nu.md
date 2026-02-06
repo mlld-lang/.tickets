@@ -1,11 +1,12 @@
 ---
 id: mlld-b2nu
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-15T10:55:02.432488-08:00
 type: task
 priority: 1
+tags: [stale-check-8]
 parent: mlld-urik
 ---
 # Capability inference for policy checking (was: C4-GAP analyze detection)

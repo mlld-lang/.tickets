@@ -6,6 +6,8 @@ links: []
 created: 2026-01-18T11:29:29.792929-08:00
 type: task
 priority: 3
+tags: [size-l, complexity-l, risk-m, impl-none, needs-human-design]
+updated: 2026-01-30T22:45:10Z
 ---
 # Detect and wrap existing MCP configs during env capture
 

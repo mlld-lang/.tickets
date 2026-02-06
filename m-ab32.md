@@ -7,7 +7,8 @@ created: 2026-01-25T12:24:57Z
 type: feature
 priority: 2
 assignee: Adam Avenir
-tags: [interpreter, cmd, reliability]
+tags: [interpreter, cmd, reliability, size-m, complexity-m, risk-m, impl-none, needs-human-design]
+updated: 2026-01-30T22:45:10Z
 ---
 # Add native timeout support for cmd/run directives
 

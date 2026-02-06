@@ -1,11 +1,13 @@
 ---
 id: mlld-znkr
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T23:59:34.31731-08:00
 type: feature
 priority: 2
+tags: [size-s, complexity-m, risk-m, impl-none]
+updated: 2026-01-30T06:40:14Z
 ---
 # parallel() should accept variable for concurrency limit
 

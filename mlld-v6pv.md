@@ -6,6 +6,7 @@ links: []
 created: 2026-01-14T20:06:42.556805-08:00
 type: task
 priority: 3
+tags: [size-xs, complexity-xs, risk-xs, impl-none]
 parent: mlld-su55
 ---
 # D4: env export/import commands (scope decision)

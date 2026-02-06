@@ -1,13 +1,15 @@
 ---
 id: m-75cc
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-25T21:19:36Z
 type: bug
-priority: 1
+priority: 0
+parent: 
 assignee: Adam Avenir
-tags: [interpreter, when, for-loop, stale-check-8]
+tags: [interpreter, when, for-loop, stale-check-8, impl-done]
+updated: 2026-01-30T11:25:48Z
 ---
 # when block show output overrides for loop return value
 

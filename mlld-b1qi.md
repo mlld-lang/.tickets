@@ -6,6 +6,8 @@ links: []
 created: 2026-01-04T13:09:25.627213-08:00
 type: bug
 priority: 2
+tags: [size-s, complexity-m, risk-m, impl-none, needs-human-design]
+updated: 2026-01-30T22:45:10Z
 ---
 # Strict mode should not have implicit final output
 

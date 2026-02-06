@@ -6,6 +6,8 @@ links: []
 created: 2026-01-01T15:06:50.486032-08:00
 type: task
 priority: 4
+tags: [size-l, complexity-m, risk-m, impl-partial, needs-human-design]
+updated: 2026-01-30T22:45:01Z
 ---
 # Docs: automated llms.txt validation and sync per release
 

@@ -6,7 +6,7 @@ links: []
 created: 2026-01-26T19:00:00Z
 type: task
 priority: 2
-tags: [docs, howto, discoverability]
+tags: [docs, howto, discoverability, size-m, complexity-s, risk-xs, impl-partial]
 ---
 # Add cross-references between related howto topics
 

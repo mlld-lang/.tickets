@@ -6,6 +6,7 @@ links: []
 created: 2026-01-14T15:22:52.279471-08:00
 type: task
 priority: 2
+tags: [stale-check-7]
 ---
 # Phase 8: Helper modules (@mlld/mcp, @mlld/keychain, @mlld/env)
 

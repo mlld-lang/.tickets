@@ -1,12 +1,14 @@
 ---
 id: mlld-rkjr
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-15T11:04:41.806116-08:00
 type: bug
 priority: 1
+tags: [size-s, complexity-s, risk-m, impl-partial]
 parent: mlld-urik
+updated: 2026-01-31T08:34:11Z
 ---
 # HIGH: @spawn signature mismatch between template and CLI
 

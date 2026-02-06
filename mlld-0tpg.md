@@ -1,11 +1,13 @@
 ---
 id: mlld-0tpg
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T16:33:51.968461-08:00
 type: task
 priority: 2
+tags: [size-xs, complexity-xs, risk-xs, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Empty array literal [] doesn't parse in when-first action position
 

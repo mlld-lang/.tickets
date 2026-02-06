@@ -6,13 +6,30 @@ links: []
 created: 2026-01-20T12:21:47.793601-08:00
 type: task
 priority: 1
+tags: [size-l, complexity-l, risk-m, impl-partial, needs-human-design]
 parent: mlld-si08
+updated: 2026-01-31T00:35:23Z
 ---
 # Security documentation overhaul for v4 spec
 
 ## Overview
 
-The security documentation needs comprehensive updates to align with spec-security-2026-v4.md. Current documentation is approximately **40% complete** against the v4 spec.
+~~The security documentation needs comprehensive updates to align with spec-security-2026-v4.md. Current documentation is approximately **40% complete** against the v4 spec.~~
+
+**UPDATE 2026-01-29:** Now ~70% complete. docs/user/security.md (805 lines) covers:
+- ✓ Policy structure and named policies
+- ✓ Signing and verification (sign/verify)
+- ✓ Autosign and autoverify
+- ✓ Guards (before/after, composition, transforms)
+- ✓ Labels and taint tracking
+- ✓ Common patterns
+
+**Still missing:**
+- `influenced` label documentation
+- `privileged: true` guard syntax
+- Environments and env providers
+- Audit ledger
+- Some atomic files listed below
 
 ## Scope Expansion
 

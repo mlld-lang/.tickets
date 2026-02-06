@@ -1,12 +1,14 @@
 ---
 id: m-3b4c
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-27T05:14:47Z
 type: bug
 priority: 1
+tags: [stale-check-10]
 assignee: Adam Avenir
+updated: 2026-01-30T12:12:05Z
 ---
 # OOM from recursive deep-copy in normalizeIterableValue (for-expression iteration)
 

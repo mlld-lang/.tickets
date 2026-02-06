@@ -1,13 +1,14 @@
 ---
 id: m-4dcb
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-25T20:55:03Z
 type: feature
 priority: 3
 assignee: Adam Avenir
-tags: [grammar, for-loop]
+tags: [grammar, for-loop, size-s, complexity-s, risk-s, impl-none]
+updated: 2026-01-30T06:58:53Z
 ---
 # Support variables in parallel() limit and timeout parameters
 

@@ -6,6 +6,8 @@ links: []
 created: 2025-12-10T22:32:56.758945-08:00
 type: feature
 priority: 3
+tags: [size-l, complexity-l, risk-l, impl-partial, needs-human-design]
+updated: 2026-01-30T22:45:10Z
 ---
 # Support template collections for registry modules
 

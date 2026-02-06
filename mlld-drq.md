@@ -1,11 +1,13 @@
 ---
 id: mlld-drq
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-10T20:20:32.153268-08:00
 type: feature
 priority: 2
+tags: [size-l, complexity-l, risk-l, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Template collection import: /import templates from dir as @name
 

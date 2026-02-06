@@ -1,11 +1,13 @@
 ---
 id: mlld-4z2w
-status: open
+status: closed
 deps: []
 links: [m-2af3]
 created: 2026-01-22T16:27:39.567852-08:00
 type: epic
 priority: 1
+tags: [size-xl, complexity-xl, risk-xl, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # MCP Tool Gateway Implementation
 

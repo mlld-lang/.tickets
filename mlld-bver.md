@@ -1,12 +1,14 @@
 ---
 id: mlld-bver
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-14T20:05:50.464996-08:00
 type: task
 priority: 2
+tags: [size-m, complexity-m, risk-m, impl-none]
 parent: mlld-su55
+updated: 2026-01-30T06:41:55Z
 ---
 # D1: Create helper modules (@mlld/*)
 

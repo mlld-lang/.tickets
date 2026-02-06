@@ -1,11 +1,13 @@
 ---
 id: mlld-cpuu
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T16:33:22.417985-08:00
 type: task
 priority: 1
+tags: [size-s, complexity-m, risk-m, impl-none]
+updated: 2026-01-30T11:58:49Z
 ---
 # .fm accessor doesn't work on for-loop iteration variables
 

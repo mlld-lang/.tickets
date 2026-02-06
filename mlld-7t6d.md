@@ -6,6 +6,7 @@ links: []
 created: 2026-01-04T19:24:52.320764-08:00
 type: feature
 priority: 3
+tags: [size-m, complexity-m, risk-s, impl-none]
 ---
 # Git hook to surface potentially stale docs after commits
 

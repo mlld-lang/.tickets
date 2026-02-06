@@ -6,6 +6,7 @@ links: []
 created: 2026-01-11T23:59:34.111087-08:00
 type: feature
 priority: 2
+tags: [size-m, complexity-l, risk-l, impl-partial]
 ---
 # Method chaining across multiple lines
 

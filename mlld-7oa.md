@@ -6,6 +6,7 @@ links: []
 created: 2025-12-18T08:58:34.850001-08:00
 type: task
 priority: 3
+tags: [size-s, complexity-s, risk-s, impl-none]
 ---
 # Better error/docs for template collection export limitations
 

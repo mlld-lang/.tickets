@@ -1,11 +1,13 @@
 ---
 id: mlld-6fq
-status: open
+status: closed
 deps: [mlld-76c]
 links: []
 created: 2025-12-13T14:24:43.061079-08:00
 type: task
 priority: 1
+tags: [size-m, complexity-m, risk-m, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Audit all visitors for column-based position calculations
 

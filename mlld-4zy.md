@@ -6,6 +6,7 @@ links: []
 created: 2025-12-08T20:57:03.568773-08:00
 type: task
 priority: 3
+tags: [size-m, complexity-m, risk-m, impl-none]
 parent: mlld-k4k
 ---
 # Formatter: mode-aware slash prefix handling

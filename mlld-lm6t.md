@@ -1,11 +1,13 @@
 ---
 id: mlld-lm6t
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-22T21:19:09.322228-08:00
 type: task
 priority: 2
+tags: [size-xs, complexity-xs, risk-xs, impl-none]
+updated: 2026-01-30T12:09:42Z
 ---
 # Glob pattern **/ does not work for recursive directory matching
 

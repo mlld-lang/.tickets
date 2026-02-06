@@ -1,11 +1,13 @@
 ---
 id: mlld-506e
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-14T17:12:08.313793-08:00
 type: task
 priority: 2
+tags: [stale-check-9]
+updated: 2026-01-30T12:12:05Z
 ---
 # Grammar may need update to support unquoted @resolver in import syntax
 

@@ -6,6 +6,7 @@ links: []
 created: 2025-12-17T08:30:10.232247-08:00
 type: feature
 priority: 2
+tags: [size-s, complexity-m, risk-m, impl-none]
 ---
 # Detect and warn about --output-format json without streaming
 

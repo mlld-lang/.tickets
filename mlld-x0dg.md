@@ -1,11 +1,13 @@
 ---
 id: mlld-x0dg
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T16:41:27.610741-08:00
 type: task
 priority: 2
+tags: [size-m, complexity-s, risk-m, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Standardize on .mx namespace for all file/content metadata
 

@@ -1,11 +1,12 @@
 ---
 id: mlld-urik
-status: open
+status: closed
 deps: []
 links: []
-created: 2026-01-15T10:54:31.254672-08:00
+created: 2026-01-15 10:54:31 -0800
 type: task
 priority: 1
+tags: [size-xl, complexity-xl, risk-xl]
 ---
 # EPIC: Remediation Completeness (Post-Audit Round 2)
 

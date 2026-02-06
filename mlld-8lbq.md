@@ -1,11 +1,13 @@
 ---
 id: mlld-8lbq
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-12T20:38:22.56588-08:00
 type: bug
 priority: 1
+tags: [stale-check-4]
+updated: 2026-01-30T07:11:21Z
 ---
 # Polish flywheel: merge phase not finding verified fixes
 

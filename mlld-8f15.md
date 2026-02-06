@@ -6,6 +6,7 @@ links: []
 created: 2026-01-15T10:55:30.422573-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-s, risk-m, impl-none]
 parent: mlld-urik
 ---
 # D2-GAP: Bidirectional publish verification

@@ -1,11 +1,13 @@
 ---
 id: mlld-l765
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-04T14:04:17.539753-08:00
 type: bug
 priority: 2
+tags: [stale-check-9]
+updated: 2026-01-30T12:09:42Z
 ---
 # LLMs misuse let for temp variables in blocks - needs better error/docs
 

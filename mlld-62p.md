@@ -1,11 +1,13 @@
 ---
 id: mlld-62p
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-09T12:26:52.590565-08:00
 type: task
 priority: 2
+tags: [impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Audit: Ensure universal StructuredValue compliance
 

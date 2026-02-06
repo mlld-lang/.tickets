@@ -6,6 +6,7 @@ links: []
 created: 2025-12-20T15:17:12.57973-08:00
 type: feature
 priority: 3
+tags: [size-l, complexity-l, risk-l, impl-none]
 ---
 # /prompt directive for SDK user input coordination
 

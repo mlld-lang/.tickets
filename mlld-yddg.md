@@ -6,6 +6,7 @@ links: []
 created: 2026-01-19T22:41:52.078595-08:00
 type: task
 priority: 2
+tags: [size-m, complexity-m, risk-m, impl-none]
 ---
 # Keychain providers (system, 1password)
 

@@ -1,11 +1,12 @@
 ---
 id: mlld-wmzl
-status: open
+status: closed
 deps: []
 links: []
-created: 2026-01-16T07:17:05.714466-08:00
+created: 2026-01-16 07:17:05 -0800
 type: epic
 priority: 0
+tags: [size-xl, complexity-xl, risk-xl]
 ---
 # Security Model v3: Label Flow Implementation
 

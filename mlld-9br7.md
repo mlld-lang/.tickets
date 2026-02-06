@@ -6,6 +6,7 @@ links: []
 created: 2026-01-11T23:59:34.564141-08:00
 type: feature
 priority: 3
+tags: [size-s, complexity-s, risk-s, impl-none]
 ---
 # replaceAll with object/map for bulk string substitution
 

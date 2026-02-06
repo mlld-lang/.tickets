@@ -1,12 +1,14 @@
 ---
 id: mlld-h47o
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-18T11:28:48.429552-08:00
 type: task
 priority: 2
+tags: [size-l, complexity-l, risk-l, impl-done]
 parent: mlld-si08
+updated: 2026-01-30T06:46:53Z
 ---
 # Env block syntax and dynamic env selection
 

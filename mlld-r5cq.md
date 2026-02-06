@@ -1,11 +1,13 @@
 ---
 id: mlld-r5cq
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T16:33:38.877871-08:00
 type: task
 priority: 2
+tags: [stale-check-9]
+updated: 2026-01-30T11:58:15Z
 ---
 # Negation ! doesn't parse in for-when conditions with method calls
 

@@ -1,11 +1,13 @@
 ---
 id: mlld-xju
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-10T18:32:55.307628-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-xs, risk-s, impl-none]
+updated: 2026-01-31T09:19:32Z
 ---
 # Refactor: Consolidate expression.ts and expressions.ts
 

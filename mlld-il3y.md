@@ -1,12 +1,14 @@
 ---
 id: mlld-il3y
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-14T20:06:29.023293-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-xs, risk-xs, impl-none]
 parent: mlld-su55
+updated: 2026-01-30T06:41:55Z
 ---
 # D3: Document mlld env commands
 

@@ -1,11 +1,13 @@
 ---
 id: mlld-701z
-status: open
+status: closed
 deps: []
 links: [mlld-19f8]
 created: 2026-01-11T14:23:07.189153-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-s, risk-xs, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Document parallel syntax for for loops (parallel modifier not 'with' option)
 

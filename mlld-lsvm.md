@@ -6,6 +6,7 @@ links: []
 created: 2025-12-20T09:16:09.703371-08:00
 type: bug
 priority: 3
+tags: [size-s, complexity-m, risk-m, impl-none]
 ---
 # LSP: 'ge' wrongly highlighted in first @agent of when blocks
 

@@ -1,11 +1,12 @@
 ---
 id: mlld-qyx6
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-22T21:29:33.537638-08:00
 type: feature
 priority: 2
+tags: [size-s, complexity-s, risk-m, impl-partial]
 ---
 # Feature: Optional file loading with <path>? postfix syntax
 

@@ -1,12 +1,14 @@
 ---
 id: mlld-ohya
-status: open
+status: closed
 deps: [mlld-8o14]
 links: []
 created: 2026-01-15T11:04:14.929329-08:00
 type: bug
 priority: 1
+tags: [stale-check-9]
 parent: mlld-urik
+updated: 2026-01-31T08:46:30Z
 ---
 # HIGH: MCP server lifecycle not implemented
 
@@ -92,3 +94,5 @@ if (mcpConfig?.servers?.length > 0) {
 6-8 hours
 
 
+
+**2026-01-31 08:46 UTC:** MCP server lifecycle is fully implemented and tested in cli/mcp/MCPOrchestrator.ts. Integration is working in env.ts spawn/shell commands. 6 tests pass. Closing as done.

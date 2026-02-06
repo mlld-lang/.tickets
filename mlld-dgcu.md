@@ -1,12 +1,14 @@
 ---
 id: mlld-dgcu
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-15T10:55:50.364453-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-xs, risk-xs, impl-none]
 parent: mlld-urik
+updated: 2026-01-31T09:29:39Z
 ---
 # D3-GAP: Document mlld env commands
 

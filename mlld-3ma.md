@@ -6,6 +6,7 @@ links: []
 created: 2025-12-08T20:57:14.29758-08:00
 type: task
 priority: 3
+tags: [stale-check-8]
 parent: mlld-k4k
 ---
 # Migration: lint warning for prose in .mld files

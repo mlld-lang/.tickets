@@ -6,6 +6,7 @@ links: []
 created: 2026-01-16T07:50:40.996831-08:00
 type: task
 priority: 0
+tags: [size-s, complexity-xs, risk-s, impl-partial]
 parent: mlld-wmzl
 ---
 # Standard policy modules (@mlld/*) - v4 structure

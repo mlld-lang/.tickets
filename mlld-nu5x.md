@@ -6,6 +6,7 @@ links: []
 created: 2026-01-18T11:29:08.959709-08:00
 type: task
 priority: 3
+tags: [size-s, complexity-s, risk-xs, impl-none]
 ---
 # Provider @capabilities checking for better errors
 

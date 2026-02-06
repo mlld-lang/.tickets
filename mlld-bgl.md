@@ -6,6 +6,8 @@ links: []
 created: 2025-12-08T12:53:10.831611-08:00
 type: task
 priority: 3
+tags: [size-m, complexity-m, risk-m, impl-none, needs-human-design]
+updated: 2026-01-30T22:45:10Z
 ---
 # Security: Policy-based working directory path restrictions
 

@@ -6,6 +6,7 @@ links: []
 created: 2026-01-19T22:24:48.342433-08:00
 type: task
 priority: 2
+tags: [size-m, complexity-m, risk-m, impl-partial]
 parent: mlld-si08
 ---
 # Audit ledger (.mlld/sec/audit.jsonl)

@@ -1,12 +1,14 @@
 ---
 id: mlld-7prj
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-15T11:04:27.639285-08:00
 type: bug
 priority: 1
+tags: [size-s, complexity-xs, risk-s, impl-none]
 parent: mlld-urik
+updated: 2026-01-31T08:27:17Z
 ---
 # HIGH: Environment module type not installable
 

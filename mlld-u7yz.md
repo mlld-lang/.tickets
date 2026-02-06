@@ -1,11 +1,13 @@
 ---
 id: mlld-u7yz
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T20:40:38.975742-08:00
 type: bug
 priority: 2
+tags: [size-s, complexity-s, risk-m, impl-none]
+updated: 2026-01-30T06:40:14Z
 ---
 # parallel(n) doesn't accept variable for concurrency limit
 

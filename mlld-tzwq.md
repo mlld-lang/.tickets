@@ -1,12 +1,14 @@
 ---
 id: mlld-tzwq
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-18T11:07:48.079624-08:00
 type: task
 priority: 1
+tags: [size-m, complexity-m, risk-s, impl-done]
 parent: mlld-si08
+updated: 2026-01-30T06:46:53Z
 ---
 # Review v4 spec for implementation gaps
 

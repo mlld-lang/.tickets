@@ -6,6 +6,7 @@ links: []
 created: 2026-01-22T11:27:49.676834-08:00
 type: feature
 priority: 2
+tags: [size-l, complexity-l, risk-m, impl-none]
 ---
 # Add @groupByFn to @mlld/array - group by executable result
 

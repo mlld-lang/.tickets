@@ -6,6 +6,7 @@ links: []
 created: 2025-12-07T13:50:42.30443-08:00
 type: task
 priority: 2
+tags: [size-l, complexity-l, risk-m, impl-none]
 ---
 # Use the SDK's analyze module function to extract the required base-level `/needs` and check them against the user's module when publishing
 

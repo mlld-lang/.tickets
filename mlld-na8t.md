@@ -6,6 +6,8 @@ links: []
 created: 2025-12-20T15:14:51.922726-08:00
 type: task
 priority: 3
+tags: []
+updated: 2026-01-30T12:18:02Z
 ---
 # DataValueEvaluator errors need better context in error messages
 
@@ -24,4 +26,6 @@ Potential improvements:
 2. Show clearer context about which evaluation failed
 3. Consider whether logger.error is the right logging level for debugging
 
+## Notes
 
+**2026-01-30**: Assessed as valid UX issue. Error messages should include the actual cause, not just "DataValueEvaluator error:".

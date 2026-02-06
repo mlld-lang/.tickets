@@ -1,12 +1,14 @@
 ---
 id: mlld-2kjj
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-15T10:55:17.32995-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-s, risk-s, impl-none]
 parent: mlld-urik
+updated: 2026-01-30T06:41:55Z
 ---
 # D1-GAP: Create missing helper modules
 

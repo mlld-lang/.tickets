@@ -6,6 +6,7 @@ links: []
 created: 2025-12-18T08:58:34.56179-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-xs, risk-xs, impl-partial]
 parent: mlld-53mk
 ---
 # Clarify template vs module directory imports in docs

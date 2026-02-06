@@ -6,6 +6,7 @@ links: []
 created: 2026-01-11T16:34:11.733656-08:00
 type: task
 priority: 3
+tags: [size-s, complexity-xs, risk-xs, impl-none]
 ---
 # No toString() or String() for type coercion
 
@@ -43,3 +44,5 @@ var @fileTier = @file.fm.qa_tier  >> 1 - number
 **Discovered in**: qa.mld refactoring - needed to check if numeric qa_tier was in a comma-separated string list.
 
 
+
+**2026-01-30 22:44 UTC:** .text doesn't exist. May need @String() function or similar. Note: string interpolation already coerces to string, so `@num` works for most cases.

@@ -1,12 +1,14 @@
 ---
 id: mlld-si08.7
-status: open
+status: closed
 deps: [mlld-8o14]
 links: []
 created: 2026-01-19T22:25:03.695943-08:00
 type: task
 priority: 2
+tags: [size-s, complexity-xs, risk-xs, impl-done]
 parent: mlld-si08
+updated: 2026-01-30T06:46:53Z
 ---
 # .mx.tools namespace (toolcalls, allowed, denied)
 

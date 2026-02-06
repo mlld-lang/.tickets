@@ -1,11 +1,13 @@
 ---
 id: mlld-zigd
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-01T16:18:51.601368-08:00
 type: bug
 priority: 2
+tags: [size-s, complexity-m, risk-m, impl-partial]
+updated: 2026-01-31T09:01:20Z
 ---
 # File load detection too aggressive for XML-like tags with dots/@
 
@@ -40,3 +42,14 @@ var @test = ::<MLLD_GUIDE name="test">::
 3. Check if content looks like valid path before attempting load
 
 
+
+**2026-01-31 09:01 UTC:** Fixed in grammar/patterns/file-reference.peggy:
+1. Added underscore support in tag/attribute name regex: [a-zA-Z0-9_-]* 
+2. Added XML attribute pattern detection to AngleBracketLiteral to accept XML tags with attributes even when they contain . * or @
+3. Added newline check in FileReferenceInterpolation to prevent matching across lines
+
+Added test cases in tests/cases/feat/alligator/:
+- xml-attributes-in-templates: Tests double-colon templates with XML tags containing dots and @
+- xml-attributes-special-chars: Tests var directives with XML tags containing dots and @
+
+All 3 XML-related tests pass.

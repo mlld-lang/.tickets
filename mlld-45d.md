@@ -6,6 +6,7 @@ links: []
 created: 2025-12-17T17:58:16.983003-08:00
 type: feature
 priority: 4
+tags: [size-s, complexity-m, risk-m, impl-none]
 ---
 # Optimize @exists() for file paths to avoid loading content
 

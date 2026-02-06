@@ -1,11 +1,13 @@
 ---
 id: mlld-7wd7
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-20T15:39:58.981545-08:00
 type: feature
 priority: 2
+tags: [size-m, complexity-m, risk-m, impl-done]
+updated: 2026-01-30T06:46:53Z
 ---
 # Allow /policy to configure cross-project file access
 

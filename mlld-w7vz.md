@@ -6,6 +6,8 @@ links: []
 created: 2026-01-11T13:47:07.073391-08:00
 type: task
 priority: 1
+tags: [size-l, complexity-m, risk-l, impl-none, needs-human-design]
+updated: 2026-01-30T22:45:01Z
 ---
 # Restructure tests/cases to align with howto topics
 
