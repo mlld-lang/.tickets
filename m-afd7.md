@@ -1,6 +1,6 @@
 ---
 id: m-afd7
-status: open
+status: closed
 deps: []
 created: 2026-02-05T12:20:08Z
 type: impl

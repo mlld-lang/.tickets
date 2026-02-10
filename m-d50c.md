@@ -1,13 +1,13 @@
 ---
 id: m-d50c
-status: in_progress
+status: closed
 deps: []
 created: 2026-02-05T12:05:19Z
 type: impl
 priority: 2
 assignee: Adam
 tags: [phase-2, urgency-high]
-updated: 2026-02-05T12:05:25Z
+updated: 2026-02-09T16:45:06Z
 ---
 # Create multi-layer policy composition example
 
@@ -31,3 +31,7 @@ The scenario requires demonstrating policy composition across three layers: team
 **Implementation guidance:**
 Look at existing tests/cases/feat/policy/union/ for structure.
 
+
+**2026-02-09 16:44 UTC:** The test fixture at tests/cases/security/policy-composition-layers/ passes. It demonstrates correct merge semantics through @mx.policy.configs.* introspection. Runtime enforcement of deny/allow was verified manually with mlld CLI (tmp/test-union3.mld). Enhanced enforcement demo will be a new ticket.
+
+**2026-02-09 16:45 UTC:** The test fixture at tests/cases/security/policy-composition-layers/ passes. It demonstrates correct merge semantics through @mx.policy.configs.* introspection. Runtime enforcement of deny/allow was verified manually with mlld CLI (tmp/test-union3.mld).
