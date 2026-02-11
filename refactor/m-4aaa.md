@@ -1,6 +1,6 @@
 ---
 id: m-4aaa
-status: open
+status: closed
 deps: [m-e149]
 created: 2026-02-09T07:01:17Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-225c
 tags: [refactor, content-loader, phase-3]
-updated: 2026-02-09T07:01:17Z
+updated: 2026-02-10T15:37:12Z
 ---
 # Refactor Program: Modularize interpreter/eval/content-loader.ts - Phase 3: Extract URL and HTML conversion handlers
 
@@ -42,3 +42,5 @@ Preserve behavior checks:
 3. Tests cover conversion fallbacks and section extraction parity.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 15:37 UTC:** --dir refactor Completed URL/HTML extraction phase. Changes: moved HTML conversion fallback logic into interpreter/eval/content-loader/html-conversion-helper.ts; moved URL fetch/section/pipeline/object-shape routing into interpreter/eval/content-loader/url-handler.ts with explicit dependencies for section and pipeline helpers; rewired interpreter/eval/content-loader.ts URL branch to consume handler output and keep finalization adapters in orchestrator. Behavior parity kept for URL metadata attachment, section and section-list extraction, HTML conversion fallback, and text/object result shapes. Tests added: URL conversion fallback when Readability returns null, fallback to raw HTML on conversion error, URL section-list extraction parity (interpreter/eval/content-loader-url.test.ts). Tests: targeted PASS (npx vitest run interpreter/eval/content-loader-url.test.ts interpreter/eval/content-loader.characterization.test.ts interpreter/eval/content-loader.test.ts interpreter/eval/content-loader-ast.test.ts interpreter/eval/content-loader-markdown.test.ts interpreter/eval/content-loader-tagging.test.ts interpreter/eval/content-loader.structured.test.ts); full gate PASS x2 (npm run build && npm test && npm run test:tokens && npm run test:examples). Commit: a6be5b48e.

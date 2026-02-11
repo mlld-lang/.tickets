@@ -5,7 +5,7 @@ deps: []
 links: []
 created: 2026-02-06T20:37:31Z
 type: task
-priority: 2
+priority: 0
 assignee: Adam Avenir
 ---
 # mlld init generates wrong config shape for resolver prefixes

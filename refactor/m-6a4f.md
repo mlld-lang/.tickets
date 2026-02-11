@@ -1,6 +1,6 @@
 ---
 id: m-6a4f
-status: open
+status: closed
 deps: [m-b451]
 created: 2026-02-09T06:58:07Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-c494
 tags: [refactor, guard-pre-hook, phase-5]
-updated: 2026-02-09T06:58:21Z
+updated: 2026-02-10T08:53:17Z
 ---
 # Refactor Program: Modularize interpreter/hooks/guard-pre-hook.ts - Phase 5: Extract guard runtime evaluator
 
@@ -48,3 +48,5 @@ Micro-checklist (runtime decision invariants):
 4. Every item in the micro-checklist is backed by explicit tests before closing this phase.
 5. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 08:53 UTC:** Completed phase by extracting guard runtime orchestration into interpreter/hooks/guard-runtime-evaluator.ts and wiring guard-pre-hook.ts to call evaluateGuardRuntime via dependency injection boundaries. Added focused tests in tests/interpreter/hooks/guard-runtime-evaluator.test.ts covering allow/deny/retry/env decision matrix, policy-condition short-circuit (no downstream action eval), GuardResult shape assertions, and sequential retry-attempt metadata isolation. Removed stale attachGuardHelper dead code from guard-pre-hook.ts after extraction. Micro-checklist completed: decision matrix, policy short-circuit assertion, result shape checks per decision type, retry metadata isolation. Targeted tests: npm test -- tests/interpreter/hooks/guard-runtime-evaluator.test.ts tests/interpreter/hooks/guard-pre-hook.test.ts (pass). Full gate run (pass): npm run build && npm test && npm run test:tokens && npm run test:examples. Phase-completion full gate rerun (pass): npm run build && npm test && npm run test:tokens && npm run test:examples.

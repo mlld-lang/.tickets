@@ -1,6 +1,6 @@
 ---
 id: m-9edc
-status: open
+status: closed
 deps: [m-fe13]
 created: 2026-02-09T07:02:43Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-845d
 tags: [refactor, pipeline-command-execution, phase-1]
-updated: 2026-02-09T07:02:43Z
+updated: 2026-02-10T10:42:39Z
 ---
 # Refactor Program: Modularize interpreter/eval/pipeline/command-execution.ts - Phase 1: Extract structured input parsing and wrapping helpers
 
@@ -41,3 +41,5 @@ Preserve behavior checks:
 3. Preserve-behavior checks are asserted in tests and pass.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 10:42 UTC:** --dir refactor

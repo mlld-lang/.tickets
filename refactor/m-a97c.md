@@ -1,13 +1,13 @@
 ---
 id: m-a97c
-status: open
-deps: []
+status: closed
+deps: [m-943f]
 created: 2026-02-09T07:04:59Z
 type: epic
 priority: 1
 assignee: Adam Avenir
 tags: [refactor, variable-importer]
-updated: 2026-02-09T07:04:59Z
+updated: 2026-02-10T15:03:16Z
 ---
 # Refactor Program: Modularize interpreter/eval/import/VariableImporter.ts
 
@@ -58,3 +58,5 @@ Residual risk:
 Focus:
 - Covers nested captured-env stacks and roundtrip serialization compatibility.
 - Adds explicit closure gates requiring checklist-backed tests before each phase closes.
+
+**2026-02-10 15:03 UTC:** --dir refactor

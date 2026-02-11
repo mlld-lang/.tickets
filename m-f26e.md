@@ -5,7 +5,7 @@ deps: []
 links: []
 created: 2026-02-06T20:17:37Z
 type: bug
-priority: 2
+priority: 0
 assignee: Adam Avenir
 tags: [parser, when, arithmetic]
 ---

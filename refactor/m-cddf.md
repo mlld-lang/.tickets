@@ -1,6 +1,6 @@
 ---
 id: m-cddf
-status: open
+status: closed
 deps: [m-abb7]
 created: 2026-02-09T07:02:43Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-845d
 tags: [refactor, pipeline-command-execution, phase-3]
-updated: 2026-02-09T07:02:44Z
+updated: 2026-02-10T10:57:17Z
 ---
 # Refactor Program: Modularize interpreter/eval/pipeline/command-execution.ts - Phase 3: Extract executable normalization and parameter binding
 
@@ -42,3 +42,5 @@ Preserve behavior checks:
 3. Preserve-behavior checks are asserted with targeted tests.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 10:57 UTC:** --dir refactor Extracted executable normalization into interpreter/eval/pipeline/command-execution/normalize-executable.ts and parameter binding into interpreter/eval/pipeline/command-execution/bind-pipeline-params.ts; rewired executeCommandVariable to consume both modules while preserving existing execution branches. Added focused tests for bound-argument precedence, missing/extra argument handling with first-parameter @input injection, format-aware pipeline input wrapping, normalization shape/op-type derivation, and non-executable error category. Checklist coverage: normalization extraction complete, binding extraction complete, first-parameter semantics preserved, preserve-behavior tests added. Tests: npx vitest run interpreter/eval/pipeline/command-execution/normalize-executable.test.ts interpreter/eval/pipeline/command-execution/bind-pipeline-params.test.ts interpreter/eval/pipeline/command-execution/resolve-command-reference.test.ts interpreter/eval/pipeline/command-execution/structured-input.test.ts interpreter/eval/pipeline/command-execution.characterization.test.ts (pass); npm run build && npm test && npm run test:tokens && npm run test:examples (pass).

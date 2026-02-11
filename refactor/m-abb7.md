@@ -1,6 +1,6 @@
 ---
 id: m-abb7
-status: open
+status: closed
 deps: [m-9edc]
 created: 2026-02-09T07:02:43Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-845d
 tags: [refactor, pipeline-command-execution, phase-2]
-updated: 2026-02-09T07:02:43Z
+updated: 2026-02-10T10:48:13Z
 ---
 # Refactor Program: Modularize interpreter/eval/pipeline/command-execution.ts - Phase 2: Extract command reference resolution services
 
@@ -41,3 +41,7 @@ Preserve behavior checks:
 3. Preserve-behavior checks are covered with focused tests.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 10:46 UTC:** --dir refactor Extracted command reference resolution internals into interpreter/eval/pipeline/command-execution/resolve-command-reference.ts while keeping resolveCommandReference export contract unchanged in command-execution.ts. Completed checklist coverage for missing variant errors, invalid field access, nested traversal, and dotted/direct transformer variant parity via new resolve-command-reference.test.ts. Tests: npx vitest run interpreter/eval/pipeline/command-execution/resolve-command-reference.test.ts interpreter/eval/pipeline/command-execution/structured-input.test.ts interpreter/eval/pipeline/command-execution.characterization.test.ts (pass); npm run build && npm test && npm run test:tokens && npm run test:examples (pass).
+
+**2026-02-10 10:48 UTC:** --dir refactor Phase completion gate rerun succeeded after final extraction state: npm run build && npm test && npm run test:tokens && npm run test:examples (pass). Committed as 117569cfa with phase-scoped files only.

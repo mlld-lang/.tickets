@@ -1,6 +1,6 @@
 ---
 id: m-4c1a
-status: open
+status: closed
 deps: [m-3dd9]
 created: 2026-02-09T06:59:36Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-943f
 tags: [refactor, import-directive-evaluator, phase-3]
-updated: 2026-02-09T06:59:37Z
+updated: 2026-02-10T13:22:04Z
 ---
 # Refactor Program: Modularize interpreter/eval/import/ImportDirectiveEvaluator.ts - Phase 3: Extract resolver and input import handlers
 
@@ -41,3 +41,7 @@ Preserve behavior checks:
 3. Tests cover fallback parsing and selected-import resolution parity.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 13:20 UTC:** --dir refactor Extracted input/resolver import paths from ImportDirectiveEvaluator into dedicated handlers and adapter modules: InputImportHandler (input flow), ResolverImportHandler (resolver invocation + capability/keychain/module branching), ResolverImportDataAdapter (getExportData/fallback parsing/selected import mapping). Updated evaluator routing to delegate input+resolver cases while preserving policy and binding contracts. Added targeted parity tests in interpreter/eval/import/resolver-import-data-adapter.test.ts for fallback JSON/object/non-JSON parsing and selected-import resolution behavior.\n\nChecklist/acceptance progress: (1) input/resolver logic extracted into dedicated handlers ✅, (2) resolver capability checks, keychain denial, and module-vs-data branching preserved ✅, (3) fallback parsing + selected-import resolution tests added ✅.\n\nTests run:\n- npx vitest run interpreter/eval/import/resolver-import-data-adapter.test.ts interpreter/eval/import/import-types.test.ts interpreter/eval/import/import-runtime-validation.test.ts interpreter/eval/import/import-directive-evaluator.characterization.test.ts -> PASS\n- npm run build && npm test && npm run test:tokens && npm run test:examples -> PASS
+
+**2026-02-10 13:22 UTC:** --dir refactor Committed phase slice as 31109d417 (refactor(import-directive-evaluator): complete m-4c1a resolver-input-handlers).\n\nPost-commit closure gate:\n- npm run build && npm test && npm run test:tokens && npm run test:examples -> PASS\n\nPhase exit criteria satisfied; ready to close.

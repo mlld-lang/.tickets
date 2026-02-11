@@ -1,6 +1,6 @@
 ---
 id: m-fd91
-status: open
+status: closed
 deps: [m-11c8]
 created: 2026-02-09T07:06:40Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-9747
 tags: [refactor, core-interpreter, phase-2]
-updated: 2026-02-09T07:06:40Z
+updated: 2026-02-10T12:00:10Z
 ---
 # Refactor Program: Modularize interpreter/core/interpreter.ts - Phase 2: Extract single-node dispatch table
 
@@ -41,3 +41,7 @@ Preserve behavior checks:
 3. Preserve-behavior checks are covered by dispatch-focused tests.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 11:58 UTC:** --dir refactor Implemented phase slice: extracted single-node dispatch selection into interpreter/core/interpreter/dispatch.ts with explicit DispatchTarget mapping and centralized unknown-node error helper. Updated interpreter/core/interpreter.ts to route all single-node branches through dispatch target selection while keeping existing handler logic and side effects unchanged. Completed checklist items: dedicated dispatch module, preserved fall-through/error path, added dispatch-focused tests in interpreter/core/interpreter/dispatch.test.ts for representative routing and unknown-node parity. Tests: npm test -- interpreter/core/interpreter/dispatch.test.ts interpreter/core/interpreter.characterization.test.ts interpreter/core/interpreter/traversal.test.ts (PASS); npm run build && npm test && npm run test:tokens && npm run test:examples (PASS).
+
+**2026-02-10 12:00 UTC:** --dir refactor Phase complete after commit 0578e812a. Post-commit validation: npm run build && npm test && npm run test:tokens && npm run test:examples (PASS).

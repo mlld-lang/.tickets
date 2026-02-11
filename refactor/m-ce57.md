@@ -1,6 +1,6 @@
 ---
 id: m-ce57
-status: open
+status: closed
 deps: []
 created: 2026-02-09T07:06:39Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-9747
 tags: [refactor, core-interpreter, phase-0]
-updated: 2026-02-09T07:06:39Z
+updated: 2026-02-10T11:46:01Z
 ---
 # Refactor Program: Modularize interpreter/core/interpreter.ts - Phase 0: Baseline and characterization
 
@@ -42,3 +42,35 @@ Preserve behavior checks:
 3. Baseline assertions are concrete enough to detect behavioral drift in later phases.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 11:44 UTC:** Phase implementation completed for baseline characterization and extraction-map preparation.
+
+Changed:
+- Added `interpreter/core/interpreter.characterization.test.ts` with baseline coverage for:
+  - document-array vs single-node evaluation behavior,
+  - frontmatter/non-frontmatter traversal behavior,
+  - expression-context behavior,
+  - dispatch/unknown-node behavior,
+  - field and pipeline resolution behavior,
+  - interpolation security recording behavior,
+  - intent emission ordering and node reconstruction behavior,
+  - `cleanNamespaceForDisplay` output contract.
+- Added extraction seam/invariant map at `docs/dev/INTERPRETER-CORE-EXTRACTION-MAP.md` for planned module ownership under `interpreter/core/interpreter/*`.
+
+Checklist/acceptance coverage:
+- No production extraction performed; this phase only adds characterization and map artifacts.
+- Baseline assertions cover API stability and preserve-behavior checks listed in the ticket.
+- Baseline checks are concrete and detect drift for dispatch, resolver, interpolation/security, and emission behavior.
+
+Tests run:
+1) Targeted:
+- npm test -- interpreter/core/interpreter.characterization.test.ts
+  Result: PASS
+2) Full gate:
+- npm run build && npm test && npm run test:tokens && npm run test:examples
+  Result: PASS
+
+**2026-02-10 11:46 UTC:** Phase completion verification:
+- Re-ran full gate after commit `75515f70f`.
+- Command: npm run build && npm test && npm run test:tokens && npm run test:examples
+- Result: PASS

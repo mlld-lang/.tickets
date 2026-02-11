@@ -5,7 +5,7 @@ deps: []
 links: []
 created: 2026-02-07T02:02:06Z
 type: bug
-priority: 1
+priority: 0
 assignee: Adam Avenir
 tags: [error-handling, ergonomics]
 ---

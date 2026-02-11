@@ -1,6 +1,6 @@
 ---
 id: m-ded6
-status: open
+status: closed
 deps: [m-33c8]
 created: 2026-02-09T07:00:10Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-68f8
 tags: [refactor, guard-post-hook, phase-5]
-updated: 2026-02-09T07:00:10Z
+updated: 2026-02-10T10:11:55Z
 ---
 # Refactor Program: Modularize interpreter/hooks/guard-post-hook.ts - Phase 5: Extract guard runtime evaluator and action handlers
 
@@ -41,3 +41,5 @@ Preserve behavior checks:
 3. Tests cover after-timing allow/deny/retry and replacement flows.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 10:11 UTC:** Refactor slice complete: extracted after-guard runtime lifecycle into interpreter/hooks/guard-post-runtime-evaluator.ts and extracted block/replacement handlers into interpreter/hooks/guard-post-runtime-actions.ts; guard-post-hook now delegates evaluation through evaluatePostGuardRuntime while keeping retry enforcement/decision engine wiring unchanged. Coverage added: tests/interpreter/hooks/guard-post-runtime-evaluator.test.ts (after-timing allow/deny/retry/env matrix + replacement branch) and tests/interpreter/hooks/guard-post-runtime-actions.test.ts (block rule evaluation, value replacement, label-only replacement descriptor propagation). Tests: npx vitest run tests/interpreter/hooks/guard-post-runtime-actions.test.ts tests/interpreter/hooks/guard-post-runtime-evaluator.test.ts tests/interpreter/hooks/guard-post-hook.test.ts tests/interpreter/hooks/guard-post-decision-engine.test.ts (PASS); npm run build && npm test && npm run test:tokens && npm run test:examples (PASS).

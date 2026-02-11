@@ -1,6 +1,6 @@
 ---
 id: m-a2a7
-status: open
+status: closed
 deps: [m-5b60]
 created: 2026-02-09T06:59:37Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-943f
 tags: [refactor, import-directive-evaluator, phase-6]
-updated: 2026-02-09T06:59:37Z
+updated: 2026-02-10T13:52:21Z
 ---
 # Refactor Program: Modularize interpreter/eval/import/ImportDirectiveEvaluator.ts - Phase 6: Extract policy, needs, and binding enforcement services
 
@@ -49,3 +49,27 @@ Micro-checklist (policy/needs/collision intersection):
 4. Every item in the micro-checklist is backed by explicit tests before closing this phase.
 5. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 13:50 UTC:** --dir refactor Implemented Phase 6 extraction:
+- Added PolicyImportContextManager (withPolicyOverride + applyPolicyImportContext).
+- Added ModuleNeedsValidator (enforceModuleNeeds + unmet-needs/runtime/package checks).
+- Added ImportBindingValidator (selected import export/binding validation with unchanged IMPORT_EXPORT_MISSING payloads).
+- Rewired ImportDirectiveEvaluator to compose extracted services and removed in-class policy/needs/binding helpers.
+- Added and updated tests for phase intersections and extracted module boundaries.
+Checklist status:
+- [x] directory-imported bindings feeding needs enforcement with unchanged unmet-needs propagation.
+- [x] policy-override context case combined with binding validation and unchanged error payload assertions.
+- [x] collision precedence before policy-context application preserved.
+- [x] runtime/package availability edge behavior covered across selected + namespace import paths.
+Tests:
+- PASS npx vitest run interpreter/eval/import/import-directive-evaluator.characterization.test.ts interpreter/eval/import/directory-import-handler.test.ts interpreter/eval/import/file-url-import-handler.test.ts interpreter/eval/import/import-runtime-validation.test.ts interpreter/eval/import/module-needs-validator.test.ts interpreter/eval/import/policy-import-context-manager.test.ts interpreter/eval/import/import-binding-validator.test.ts interpreter/eval/import/import-types.test.ts
+- PASS npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 13:52 UTC:** --dir refactor Post-commit validation complete.
+Commit: e495c8b72 (refactor(import-directive-evaluator): complete m-a2a7 extract policy needs binding services)
+Gate:
+- PASS npm run build
+- PASS npm test
+- PASS npm run test:tokens
+- PASS npm run test:examples
+Phase exit criteria satisfied.

@@ -1,6 +1,6 @@
 ---
 id: m-65ab
-status: open
+status: closed
 deps: [m-ded6]
 created: 2026-02-09T07:00:10Z
 type: task
@@ -8,7 +8,7 @@ priority: 1
 assignee: Adam Avenir
 parent: m-68f8
 tags: [refactor, guard-post-hook, phase-6]
-updated: 2026-02-09T07:00:11Z
+updated: 2026-02-10T10:17:29Z
 ---
 # Refactor Program: Modularize interpreter/hooks/guard-post-hook.ts - Phase 6: Extract helper injection and cloning utilities
 
@@ -41,3 +41,5 @@ Preserve behavior checks:
 3. Tests cover helper availability and representative clone/preview outputs.
 4. Exit criteria: test gate command succeeds and output is attached:
    npm run build && npm test && npm run test:tokens && npm run test:examples
+
+**2026-02-10 10:17 UTC:** Refactor slice complete: extracted helper provisioning into interpreter/hooks/guard-post-helper-injection.ts (opIs/opHas/opHasAny/opHasAll/inputHas, prefixWith, tagValue, guard input helper attachment) and extracted clone/preview/value utilities into interpreter/hooks/guard-post-materialization.ts; guard-post-hook now composes these modules and runtime evaluator consumes them through explicit dependency interfaces. Behavior preserved: helper names/signatures unchanged, existing tagValue fallback preserved, post-hook preview semantics remain non-redacted, clone/descriptor shaping unchanged. Tests added: tests/interpreter/hooks/guard-post-helper-injection.test.ts and tests/interpreter/hooks/guard-post-materialization.test.ts. Targeted tests: npx vitest run tests/interpreter/hooks/guard-post-helper-injection.test.ts tests/interpreter/hooks/guard-post-materialization.test.ts tests/interpreter/hooks/guard-post-runtime-actions.test.ts tests/interpreter/hooks/guard-post-runtime-evaluator.test.ts tests/interpreter/hooks/guard-post-hook.test.ts (PASS). Full gate: npm run build && npm test && npm run test:tokens && npm run test:examples (PASS).
