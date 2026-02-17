@@ -1,11 +1,12 @@
 ---
 id: m-6a3f
-status: open
+status: closed
 deps: []
 created: 2026-02-17T01:55:09Z
 type: chore
 priority: 0
 assignee: Adam
+updated: 2026-02-17T08:10:40Z
 ---
 # Audit and clean ALL-CAPS annotation comments and commented-out code
 

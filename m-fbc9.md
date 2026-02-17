@@ -1,11 +1,12 @@
 ---
 id: m-fbc9
-status: open
+status: closed
 deps: []
 created: 2026-02-17T04:56:38Z
 type: task
 priority: 0
 assignee: Adam
+updated: 2026-02-17T17:59:17Z
 ---
 # Audit @ escaping consistency across all interpolation contexts
 
@@ -15,3 +16,5 @@ Investigate all contexts where @ interpolation happens (backtick strings, double
 
 Test coverage proving \@ and @@ produce literal @ in every interpolation context
 
+
+**2026-02-17 17:59 UTC:** Added integration test coverage for @@ and \@ parity across backtick, double/single quote, :: templates, .att templates, and cmd blocks; added rc82 changelog note; tests: npx vitest run tests/integration/escaping-at-contexts.test.ts and full npm test passed earlier in this session; commit 215ba99cc.

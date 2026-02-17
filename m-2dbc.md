@@ -1,11 +1,12 @@
 ---
 id: m-2dbc
-status: open
+status: closed
 deps: []
 created: 2026-02-17T04:59:08Z
 type: chore
 priority: 0
 assignee: Adam
+updated: 2026-02-17T08:03:36Z
 ---
 # Polish CONTRIBUTING.md tone for public release
 
