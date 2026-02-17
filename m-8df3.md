@@ -1,11 +1,12 @@
 ---
 id: m-8df3
-status: open
+status: closed
 deps: []
 created: 2026-02-17T04:59:08Z
 type: chore
 priority: 0
 assignee: Adam
+updated: 2026-02-17T18:59:14Z
 ---
 # Clean up 1100+ debug console.log statements in production code
 
