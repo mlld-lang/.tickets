@@ -1,13 +1,13 @@
 ---
 id: mlld-h767
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-14T17:11:57.943012-08:00
 type: bug
 priority: 2
 tags: []
-updated: 2026-01-30T12:18:02Z
+updated: 2026-02-12T12:06:56Z
 ---
 # exec-invocation.ts only passes first arg to transformerImplementation - keychain functions need all args
 

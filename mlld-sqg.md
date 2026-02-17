@@ -5,10 +5,10 @@ deps: []
 links: []
 created: 2025-12-18T10:21:10.33158-08:00
 type: feature
-priority: 2
+priority: 1
 tags: [size-l, complexity-l, risk-l, impl-none]
 ---
-# MCP: Inline server orchestration with /mcp directive
+# Design: MCP inline server orchestration with /mcp directive
 
 Add inline MCP server orchestration to mlld scripts using /mcp directive.
 

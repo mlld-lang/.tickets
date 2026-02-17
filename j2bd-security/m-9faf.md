@@ -1,13 +1,13 @@
 ---
 id: m-9faf
-status: open
+status: closed
 deps: []
 created: 2026-02-09T20:15:07Z
 type: task
 priority: 2
 assignee: Adam Avenir
 tags: [urgency-high, doc-polish]
-updated: 2026-02-09T20:15:07Z
+updated: 2026-02-12T11:34:01Z
 ---
 # Polish: Fix cross-refs, add navigation, clarify union()
 

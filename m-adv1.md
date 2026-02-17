@@ -1,13 +1,13 @@
 ---
 id: m-adv1
-status: open
+status: closed
 deps: []
 created: 2026-02-04T22:49:29Z
 type: task
 priority: 2
 assignee: Adam
 tags: [adversarial, phase-4, env-module]
-updated: 2026-02-04T22:49:32Z
+updated: 2026-02-12T11:30:50Z
 ---
 # Adversarial verification: reusable environment module exit criteria
 

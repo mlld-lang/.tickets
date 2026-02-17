@@ -1,11 +1,12 @@
 ---
 id: m-ee1e
-status: open
+status: closed
 deps: []
 created: 2026-02-11T04:11:29Z
 type: bug
-priority: 1
+priority: 0
 assignee: Adam
+updated: 2026-02-12T14:51:58Z
 ---
 # for...when guard only works with single-line yield, not block body
 

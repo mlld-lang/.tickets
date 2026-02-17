@@ -4,7 +4,7 @@ status: open
 deps: []
 created: 2026-02-05T21:35:19Z
 type: feature
-priority: 2
+priority: 1
 assignee: Adam
 ---
 # Environment-mediated MCP via @mcpConfig() and profiles

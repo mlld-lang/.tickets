@@ -1,15 +1,15 @@
 ---
 id: m-f97f
-status: open
+status: closed
 deps: []
 created: 2026-02-10T04:08:33Z
 type: bug
 priority: 0
 assignee: Adam
 tags: [p0, structuredvalue, data-boundary]
-updated: 2026-02-10T04:08:49Z
+updated: 2026-02-12T14:31:46Z
 ---
-# Inline object literals as function arguments resolve to empty string
+# StructuredValue: inline object literals as function arguments resolve to empty string
 
 ## Summary
 

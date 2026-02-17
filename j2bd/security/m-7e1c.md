@@ -1,11 +1,12 @@
 ---
 id: m-7e1c
-status: open
+status: closed
 deps: []
 created: 2026-02-09T08:41:30Z
 type: bug
-priority: 2
+priority: 0
 assignee: Adam Avenir
+updated: 2026-02-12T16:27:11Z
 ---
 # Export system doesn't filter unexported module members
 

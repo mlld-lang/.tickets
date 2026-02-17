@@ -1,13 +1,13 @@
 ---
 id: m-09aa
-status: open
+status: closed
 deps: []
 created: 2026-02-04T00:20:23Z
 type: task
 priority: 0
 assignee: Adam
 tags: [urgency-high]
-updated: 2026-02-04T00:20:25Z
+updated: 2026-02-12T11:30:47Z
 ---
 # Final review: security sandbox job holistic assessment
 

@@ -5,10 +5,10 @@ deps: []
 links: []
 created: 2026-02-06T20:39:31Z
 type: task
-priority: 2
+priority: 1
 assignee: Adam Avenir
 ---
-# Review: mlld init default trustedDomains — design and security implications
+# Design: mlld init default trustedDomains — security implications
 
 mlld init scaffolds every new project with:
 

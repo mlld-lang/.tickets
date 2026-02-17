@@ -1,13 +1,13 @@
 ---
 id: m-5af3
-status: open
+status: closed
 deps: []
 created: 2026-02-05T01:21:20Z
 type: task
 priority: 1
 assignee: Adam
 tags: [adversarial, urgency-high]
-updated: 2026-02-05T01:21:23Z
+updated: 2026-02-12T11:30:49Z
 ---
 # Adversarial verification of sandbox restrictions
 

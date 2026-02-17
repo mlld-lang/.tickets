@@ -1,13 +1,13 @@
 ---
 id: m-fc63
-status: in_progress
+status: closed
 deps: []
 created: 2026-01-31T00:57:15Z
 type: feature
 priority: 0
 assignee: Adam
 tags: [grammar, security, guards, size-m, complexity-m, risk-m, impl-none]
-updated: 2026-01-31T10:48:36Z
+updated: 2026-02-12T14:51:58Z
 ---
 # Implement with { privileged: true } syntax for user-defined guards
 

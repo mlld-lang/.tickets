@@ -1,12 +1,13 @@
 ---
 id: mlld-399
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-17T08:30:10.46621-08:00
 type: feature
 priority: 2
 tags: [size-m, complexity-m, risk-m, impl-partial]
+updated: 2026-02-13T15:37:22Z
 ---
 # Add 'did you mean' checks for template path resolution
 

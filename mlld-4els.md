@@ -1,12 +1,13 @@
 ---
 id: mlld-4els
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-04T13:54:23.811618-08:00
 type: bug
 priority: 3
 tags: [size-m, complexity-l, risk-l, impl-none]
+updated: 2026-02-13T16:11:24Z
 ---
 # Grammar: for block with inline => multiline template fails to parse
 

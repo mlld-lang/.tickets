@@ -1,11 +1,12 @@
 ---
 id: m-b5a2
-status: open
+status: closed
 deps: []
 created: 2026-02-02T22:11:58Z
 type: task
-priority: 2
+priority: 0
 assignee: Adam
+updated: 2026-02-12T14:52:27Z
 ---
 # Better error message for spread operator typo (.. vs ...)
 

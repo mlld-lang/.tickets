@@ -1,15 +1,15 @@
 ---
 id: m-dfeb
-status: open
+status: closed
 deps: []
 created: 2026-02-10T04:08:17Z
 type: bug
 priority: 0
 assignee: Adam
 tags: [p0, structuredvalue, data-boundary]
-updated: 2026-02-10T04:08:49Z
+updated: 2026-02-12T14:31:46Z
 ---
-# Object spread on function parameters fails — StructuredValue.text passed instead of .data
+# StructuredValue: object spread on function parameters gets .text instead of .data
 
 ## Summary
 

@@ -1,13 +1,13 @@
 ---
 id: mlld-b1qi
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-04T13:09:25.627213-08:00
 type: bug
 priority: 2
 tags: [size-s, complexity-m, risk-m, impl-none, needs-human-design]
-updated: 2026-01-30T22:45:10Z
+updated: 2026-02-13T16:36:58Z
 ---
 # Strict mode should not have implicit final output
 
@@ -27,3 +27,5 @@ Needs investigation:
 3. Should strict mode have any implicit output at all?
 
 
+
+**2026-02-13 16:36 UTC:** Folded into m-968f (top-level =>). The strict mode output model is now: show for side-effect stdout, log for stderr, => for script return value (printed by CLI), no implicit final output. This resolves the duplication bug.

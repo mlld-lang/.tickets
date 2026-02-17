@@ -1,11 +1,12 @@
 ---
 id: m-f57c
-status: open
+status: closed
 deps: []
 created: 2026-02-06T02:20:30Z
 type: j2bd-security,urgency-high,security-fix
 priority: 2
 assignee: Adam
+updated: 2026-02-12T11:34:02Z
 ---
 # Redact secret values in guard error messages
 

@@ -1,12 +1,13 @@
 ---
 id: mlld-iox7
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-11T23:59:34.111087-08:00
 type: feature
-priority: 0
+priority: 1
 tags: [size-m, complexity-l, risk-l, impl-partial]
+updated: 2026-02-13T16:19:35Z
 ---
 # Method chaining across multiple lines
 
@@ -34,3 +35,5 @@ exe @buildPrompt(tmpl, failure) = @tmpl
 Multiline method chaining would significantly clean up data transformation pipelines.
 
 
+
+**2026-02-12 20:55 UTC:** Downgraded to P1. Has workarounds (intermediate variables), grammar change needs careful design around newline-as-statement-terminator.

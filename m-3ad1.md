@@ -1,13 +1,13 @@
 ---
 id: m-3ad1
-status: open
+status: closed
 deps: []
 created: 2026-02-03T05:58:22Z
 type: bug
-priority: 2
+priority: 0
 assignee: Adam
 tags: [security, env-directive, phase-3]
-updated: 2026-02-03T05:58:25Z
+updated: 2026-02-12T13:38:16Z
 ---
 # Tool restrictions not enforced in env blocks
 

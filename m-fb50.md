@@ -1,13 +1,13 @@
 ---
 id: m-fb50
-status: open
+status: closed
 deps: []
 created: 2026-02-02T06:07:14Z
 type: task
-priority: 2
+priority: 0
 assignee: Adam
 tags: [bug, shell, interpreter]
-updated: 2026-02-02T06:07:18Z
+updated: 2026-02-12T15:13:32Z
 ---
 # Path objects passed to sh blocks should stringify to path
 

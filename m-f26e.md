@@ -1,6 +1,6 @@
 ---
 id: m-f26e
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-02-06T20:17:37Z
@@ -8,6 +8,7 @@ type: bug
 priority: 0
 assignee: Adam Avenir
 tags: [parser, when, arithmetic]
+updated: 2026-02-12T14:51:58Z
 ---
 # Multiplication * on return line parsed as when wildcard
 

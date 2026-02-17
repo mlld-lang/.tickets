@@ -1,6 +1,6 @@
 ---
 id: m-0ccb
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-02-07T02:02:06Z
@@ -8,6 +8,7 @@ type: bug
 priority: 0
 assignee: Adam Avenir
 tags: [error-handling, ergonomics]
+updated: 2026-02-12T21:44:53Z
 ---
 # Runtime errors in for-loop bodies silently become data instead of throwing
 
@@ -38,3 +39,7 @@ Suggestions:
 2. Consider making error propagation (throw) the default; require explicit opt-in (e.g., `with { ok: true }`) to capture errors as data
 3. The __error wrapper pattern is useful but should be opt-in, not the silent default
 
+
+**2026-02-12 20:55 UTC:** Design decision: throw by default. Silent error wrapping is the wrong default. Opt-in error-as-data via explicit syntax for scripts that want it.
+
+**2026-02-12 21:44 UTC:** Added fixture regression tests/cases/exceptions/for-expression-runtime-error-propagates. Confirmed runtime errors in for-expression bodies throw (no silent __error wrapping). Ran full test suite: npm test (pass). Commit: f2ea3ef93.
