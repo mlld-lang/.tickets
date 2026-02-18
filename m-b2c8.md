@@ -1,11 +1,12 @@
 ---
 id: m-b2c8
-status: open
+status: closed
 deps: []
 created: 2026-02-14T22:17:06Z
 type: feature
 priority: 1
 assignee: Adam
+updated: 2026-02-17T21:11:32Z
 ---
 # mlld skill install: cross-harness skill installation and lifecycle
 

@@ -1,6 +1,6 @@
 ---
 id: mlld-vgx2
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-20T12:21:47.793601-08:00
@@ -8,7 +8,7 @@ type: task
 priority: 1
 tags: [size-l, complexity-l, risk-m, impl-partial, needs-human-design]
 parent: mlld-si08
-updated: 2026-01-31T00:35:23Z
+updated: 2026-02-17T21:16:14Z
 ---
 # Security documentation overhaul for v4 spec
 

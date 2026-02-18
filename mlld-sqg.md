@@ -1,12 +1,13 @@
 ---
 id: mlld-sqg
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-18T10:21:10.33158-08:00
 type: feature
 priority: 1
 tags: [size-l, complexity-l, risk-l, impl-none]
+updated: 2026-02-17T21:17:49Z
 ---
 # Design: MCP inline server orchestration with /mcp directive
 

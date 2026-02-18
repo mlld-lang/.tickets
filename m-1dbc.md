@@ -1,13 +1,13 @@
 ---
 id: m-1dbc
-status: open
+status: closed
 deps: []
 created: 2026-02-16T17:17:36Z
 type: task
 priority: 1
 assignee: Adam
 tags: [docs, p1, qa-driven]
-updated: 2026-02-16T17:17:40Z
+updated: 2026-02-17T21:14:21Z
 ---
 # doc: add prominent angle bracket file-detection callout in escaping-basics
 

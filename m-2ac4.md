@@ -1,6 +1,6 @@
 ---
 id: m-2ac4
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-01-28T23:46:02Z
@@ -9,7 +9,7 @@ priority: 1
 parent: mlld-vgx2
 assignee: Adam
 tags: [docs, doc-fix, security, howto, impl-done, needs-human-design]
-updated: 2026-01-30T16:23:35Z
+updated: 2026-02-17T21:27:12Z
 ---
 # Create security howto atoms
 

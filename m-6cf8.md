@@ -15,3 +15,5 @@ When validate detects an undefined variable like `@nmae`, suggest the closest ma
 
 Undefined variable warnings include fuzzy match suggestions when a close match exists
 
+
+**2026-02-17 21:19 UTC:** Link with m-07d3 — both need fuzzy matching. Should extract a central FuzzyMatchService that both 'did you mean' features use (parse error suggestions + undefined variable suggestions).
