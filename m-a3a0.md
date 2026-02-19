@@ -1,11 +1,12 @@
 ---
 id: m-a3a0
-status: open
+status: closed
 deps: []
 created: 2026-02-18T16:03:02Z
 type: task
 priority: 0
 assignee: Adam Avenir
+updated: 2026-02-19T03:14:07Z
 ---
 # Rearchitect review-docs to use check-and-repair decision loop
 
