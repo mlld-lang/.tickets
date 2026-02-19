@@ -1,11 +1,12 @@
 ---
 id: m-aacb
-status: open
+status: closed
 deps: []
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 1
 assignee: Adam Avenir
+updated: 2026-02-19T07:04:00Z
 ---
 # Phase 0: Baseline + protocol contracts
 

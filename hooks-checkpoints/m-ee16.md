@@ -1,12 +1,12 @@
 ---
 id: m-ee16
-status: open
+status: closed
 deps: [m-6865]
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 1
 assignee: Adam Avenir
-updated: 2026-02-18T17:09:40Z
+updated: 2026-02-19T12:48:28Z
 ---
 # Phase 5: CheckpointManager core
 

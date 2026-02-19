@@ -1,12 +1,12 @@
 ---
 id: m-fff0
-status: open
+status: closed
 deps: [m-cf0f]
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 1
 assignee: Adam Avenir
-updated: 2026-02-18T17:09:40Z
+updated: 2026-02-19T13:29:34Z
 ---
 # Phase 7: CLI/SDK checkpoint-resume-fork wiring
 

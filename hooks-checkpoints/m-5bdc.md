@@ -1,12 +1,12 @@
 ---
 id: m-5bdc
-status: open
+status: closed
 deps: [m-0989]
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 0
 assignee: Adam Avenir
-updated: 2026-02-18T17:09:39Z
+updated: 2026-02-19T08:07:01Z
 ---
 # Phase 3B: User hook transforms + error isolation + emission compatibility
 

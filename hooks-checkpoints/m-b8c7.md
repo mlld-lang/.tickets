@@ -1,12 +1,12 @@
 ---
 id: m-b8c7
-status: open
+status: closed
 deps: [m-8f72]
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 1
 assignee: Adam Avenir
-updated: 2026-02-18T17:09:39Z
+updated: 2026-02-19T07:26:16Z
 ---
 # Phase 1: Hook grammar + AST/type wiring
 

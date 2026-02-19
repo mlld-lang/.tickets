@@ -1,12 +1,12 @@
 ---
 id: m-af57
-status: open
+status: closed
 deps: [m-2e1f]
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 1
 assignee: Adam Avenir
-updated: 2026-02-18T17:09:40Z
+updated: 2026-02-19T14:10:35Z
 ---
 # Phase 9: Final docs + integration fixtures + coverage readiness
 

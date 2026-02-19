@@ -1,12 +1,12 @@
 ---
 id: m-2e1f
-status: open
+status: closed
 deps: [m-fff0]
 created: 2026-02-18T17:09:31Z
 type: task
 priority: 1
 assignee: Adam Avenir
-updated: 2026-02-18T17:09:40Z
+updated: 2026-02-19T13:49:02Z
 ---
 # Phase 8: Resume targeting + fuzzy invalidation + fork semantics
 
