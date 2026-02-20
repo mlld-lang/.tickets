@@ -6,8 +6,8 @@ created: 2026-02-19T23:02:01Z
 type: bug
 priority: 1
 assignee: Adam Avenir
-tags: [severity-high, pre-ga]
-updated: 2026-02-19T23:02:06Z
+tags: [severity-high, pre-ga, polish]
+updated: 2026-02-20T16:05:52Z
 ---
 # Fix CLI docs: mlld init incorrectly documents module creation flags
 
