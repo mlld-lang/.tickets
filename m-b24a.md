@@ -1,11 +1,12 @@
 ---
 id: m-b24a
-status: open
+status: closed
 deps: []
 created: 2026-02-19T17:29:52Z
 type: bug
 priority: 0
 assignee: Adam Avenir
+updated: 2026-02-20T00:55:58Z
 ---
 # Audit and clarify @exists vs @fileExists built-in resolution
 
@@ -80,3 +81,10 @@ Implementation files:
 - Methods: interpreter/eval/exec/builtins.ts
 - Variables: interpreter/env/VariableManager.ts
 - Field access: interpreter/utils/field-access.ts
+
+**2026-02-20 00:55 UTC:** Documentation complete:
+- reference.md: added 'undefined function call' row to undefined variables table (Command not found error)
+- reference.md: expanded @exists/@fileExists from 2 terse lines into full Existence Checks subsection with function-call forms, argument types, pipeline forms, and a callout explaining the critical distinction
+- reference.md: added Helpers subsection (@keep, @keepStructured) that was missing
+- New mistake atom: docs/src/atoms/mistakes/exists-vs-fileExists.md — documents the @exists vs @fileExists footgun with WRONG/RIGHT examples
+All 4 acceptance criteria now met.

@@ -1,12 +1,12 @@
 ---
 id: m-e39a
-status: open
+status: closed
 deps: [m-b24a]
 created: 2026-02-19T18:39:34Z
 type: feature
 priority: 0
 assignee: Adam Avenir
-updated: 2026-02-19T18:39:37Z
+updated: 2026-02-20T01:18:14Z
 ---
 # Pre-flight deep validation: walk full script tree before execution
 
@@ -75,3 +75,5 @@ Before any execution begins, walk the full script tree:
 - [ ] Pre-flight adds negligible latency (< 200ms for typical scripts)
 - [ ] Error message includes the escape hint: "use @@var or \@var for literal @ text"
 
+
+**2026-02-20 01:18 UTC:** Implemented deep pre-flight validation for mlld run and deep mode for validate. Added recursive import/template traversal, strict template undefined-variable promotion to errors with @@/\@ escape hints, warning rendering with --no-warn suppression, and tests in cli/commands/run.test.ts + cli/commands/analyze.test.ts. Verified with: npx vitest run cli/commands/run.test.ts cli/commands/analyze.test.ts --reporter=dot --silent
