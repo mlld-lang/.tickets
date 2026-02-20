@@ -1,12 +1,13 @@
 ---
 id: m-a2ff
-status: open
+status: closed
 deps: []
 created: 2026-02-19T17:14:55Z
 type: bug
 priority: 0
 assignee: Adam Avenir
 external-ref: gh-551
+updated: 2026-02-19T22:43:29Z
 ---
 # CLI: hyphenated flags inaccessible via @payload dot notation
 

@@ -1,13 +1,13 @@
 ---
 id: m-acb6
-status: open
+status: closed
 deps: []
 created: 2026-02-19T04:59:07Z
 type: feature
 priority: 0
 assignee: Adam Avenir
 tags: [lsp, embedded-languages, wasm]
-updated: 2026-02-19T04:59:10Z
+updated: 2026-02-19T22:47:33Z
 ---
 # LSP: Enable tree-sitter WASM for Python and Bash embedded blocks
 
@@ -49,3 +49,5 @@ Our current `tree-sitter-python@0.20.4` and `tree-sitter-bash@0.20.5` packages d
 - `npm test services/lsp` passes
 - CI build succeeds (graceful fallback if WASM unavailable in CI)
 
+
+**2026-02-19 22:42 UTC:** Implemented: upgraded tree-sitter-{javascript,python,bash} to 0.23.x; enabled WASM copy/load for js+python+bash; removed stale sh/py TODO fallback note; updated embedded-language token tests for real Bash/Python parsing; updated docs/dev/LANGUAGE-SERVER.md. Validation: npm run build:wasm copies all 3 wasm files; npx vitest run --config vitest.config.tokens.mts services/lsp/embedded-language-tokens.test.ts passes. Full npm test services/lsp currently fails on unrelated baseline issues (tmp/exact-check.test.ts has no suite; MCP socket EPERM in cli/mcp/MCPOrchestrator.test.ts under sandbox).

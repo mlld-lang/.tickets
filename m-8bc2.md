@@ -1,12 +1,13 @@
 ---
 id: m-8bc2
-status: open
+status: closed
 deps: []
 created: 2026-02-19T17:14:52Z
 type: bug
 priority: 0
 assignee: Adam Avenir
 external-ref: gh-550
+updated: 2026-02-19T22:43:28Z
 ---
 # Grammar: inline >> comments after ] fail to parse in strict mode
 

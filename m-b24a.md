@@ -48,3 +48,35 @@ This exposed several gaps:
 - [ ] Canonical file-existence pattern is documented (built-in or recipe)
 - [ ] Review orchestrator and other llm/run scripts audited for similar bugs
 
+
+**2026-02-19 23:15 UTC:** Partial progress: Criterion 4 (audit llm/run scripts) is complete — review orchestrator fixed, all scripts use @fileExists correctly. Criterion 1 partially met — undefined function calls now throw 'Command not found' but behavior isn't documented. Criteria 2-3 still open: many transformers missing from reference.md (@exists, @fileExists, @typeof, @upper, @lower, @trim, @pretty, @sort), and canonical file-existence pattern not documented.
+
+**2026-02-19 23:22 UTC:** Investigation complete. Full inventory of gaps:
+
+TRANSFORMERS missing from reference.md (8):
+@upper, @lower, @trim, @pretty, @sort, @typeof, @exists, @fileExists
+
+STRING METHODS missing from reference.md (~13):
+slice, substring, substr, replace, replaceAll, padStart, padEnd, repeat, match, plus existing docs could note startsWith/endsWith more prominently
+
+ARRAY METHODS missing from reference.md (4):
+slice, concat, reverse, sort
+
+TYPE-CHECKING METHODS missing entirely (7):
+isArray(), isObject(), isString(), isNumber(), isBoolean(), isNull(), isDefined()
+
+FILE-EXISTENCE PATTERN:
+No canonical docs. Built-in @fileExists transformer just checks non-empty input. The actual file-check pattern is a user-defined exe: exe @fileExists(path) = sh { test -f "$path" && echo "yes" || echo "no" }. This needs to be documented as a recipe or promoted to a real built-in.
+
+UNDEFINED IDENTIFIER BEHAVIOR (undocumented, context-dependent):
+- Function args: throws 'Undefined variable @x passed to function @fn'
+- Template interpolation: returns literal '@varName' string (no error)
+- Spread operations: throws error
+- Augmented assignment: throws error
+This is by design but should be documented explicitly.
+
+Implementation files:
+- Transformers: interpreter/builtin/transformers.ts
+- Methods: interpreter/eval/exec/builtins.ts
+- Variables: interpreter/env/VariableManager.ts
+- Field access: interpreter/utils/field-access.ts

@@ -1,11 +1,12 @@
 ---
 id: m-bc20
-status: open
+status: closed
 deps: []
 created: 2026-02-19T17:15:06Z
 type: feature
 priority: 0
 assignee: Adam Avenir
+updated: 2026-02-19T23:12:57Z
 ---
 # Validator: @json deprecation warning should explain both serialization and parsing paths
 
