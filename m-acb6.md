@@ -21,18 +21,18 @@ Our current `tree-sitter-python@0.20.4` and `tree-sitter-bash@0.20.5` packages d
 
 ## Approach
 
-**Upgrade tree-sitter language packages to 0.23.x** — these versions ship pre-built `.wasm` files:
-- `tree-sitter-python@0.23.6` (458KB WASM)
-- `tree-sitter-bash@0.23.3` (1.4MB WASM)  
-- `tree-sitter-javascript@0.23.1` (359KB WASM) — upgrade for consistency
+**Upgrade all tree-sitter packages to latest:**
+- `web-tree-sitter` 0.20.8 → **0.25.10** (latest 0.25.x — accepts both `dylink` and `dylink.0` WASM formats; avoid 0.26.x which drops legacy `dylink` support)
+- `tree-sitter-javascript` 0.20.4 → **0.25.0** (latest; ships pre-built WASM, 412KB)
+- `tree-sitter-python` 0.20.4 → **0.25.0** (latest; ships pre-built WASM, 458KB)
+- `tree-sitter-bash` 0.20.5 → **0.25.1** (latest; ships pre-built WASM, 1.4MB)
 
-### Compatibility check required
-- We use `web-tree-sitter@0.20.8`. The 0.23.x WASM files may use `dylink.0` section format while 0.20.8 expects `dylink`. Test this first.
-- If incompatible, bump `web-tree-sitter` to 0.23.x or 0.25.x (do NOT go to 0.26.x — that has breaking WASM format changes going the other direction).
+### WASM format compatibility note
+`web-tree-sitter@0.26.x` switched to requiring `dylink.0` format only and broke backward compat with older WASM files. Staying on 0.25.x avoids this — it accepts both formats. The 0.25.x language packages should pair cleanly with `web-tree-sitter@0.25.10`. If any API breaking changes surface between 0.20→0.25, address in the same PR.
 
 ## Changes
 
-1. **package.json** — Upgrade `tree-sitter-python`, `tree-sitter-bash`, `tree-sitter-javascript` to 0.23.x; bump `web-tree-sitter` if needed
+1. **package.json** — Upgrade `web-tree-sitter` to ^0.25.10, `tree-sitter-javascript` to ^0.25.0, `tree-sitter-python` to ^0.25.0, `tree-sitter-bash` to ^0.25.1
 2. **scripts/copy-wasm-files.js:18** — Change `const languages = ['javascript']` to `['javascript', 'python', 'bash']`
 3. **services/lsp/embedded/EmbeddedLanguageService.ts:210-212** — Uncomment `loadLanguage('python')` and `loadLanguage('bash')`
 4. **services/lsp/utils/LanguageBlockHelper.ts:185** — Remove the TODO comment about enabling tree-sitter for sh/py

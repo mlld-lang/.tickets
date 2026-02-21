@@ -7,7 +7,7 @@ type: bug
 priority: 0
 assignee: Adam Avenir
 external-ref: gh-550
-updated: 2026-02-19T22:43:28Z
+updated: 2026-02-19T18:34:43Z
 ---
 # Grammar: inline >> comments after ] fail to parse in strict mode
 
