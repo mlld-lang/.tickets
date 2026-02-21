@@ -1,11 +1,12 @@
 ---
 id: m-4ce1
-status: open
+status: closed
 deps: []
 created: 2026-02-20T01:21:28Z
 type: bug
 priority: 1
 assignee: Adam Avenir
+updated: 2026-02-20T23:32:59Z
 ---
 # Investigate policy loading: union(@config) required instead of direct import/creation
 
