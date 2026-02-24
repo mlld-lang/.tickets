@@ -6,7 +6,8 @@ created: 2026-02-19T21:10:04Z
 type: task
 priority: 0
 assignee: Adam Avenir
-updated: 2026-02-19T21:10:08Z
+updated: 2026-02-23T23:37:50Z
+links: 
 ---
 # Update orchestrator skill docs to teach checkpoint/resume as primary resilience pattern
 

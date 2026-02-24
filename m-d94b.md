@@ -1,13 +1,13 @@
 ---
 id: m-d94b
-status: open
+status: closed
 deps: []
 created: 2026-02-12T20:57:43Z
 type: feature
 priority: 1
 assignee: Adam
 tags: [structured-value, data-model]
-updated: 2026-02-12T20:57:46Z
+updated: 2026-02-24T13:35:11Z
 ---
 # StructuredValue: expose .mx.text and .mx.data for direct value access
 
@@ -62,3 +62,7 @@ Acceptance criteria:
 - Tests covering direct access vs pipe access equivalence
 - Tests covering auto-resolution: @sv.field == @sv.mx.data.field
 
+
+## Notes
+
+**2026-02-24T11:34:27Z** Ensure all relevant docs/src/atoms are updated

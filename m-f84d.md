@@ -1,11 +1,12 @@
 ---
 id: m-f84d
-status: open
+status: closed
 deps: []
 created: 2026-02-21T01:27:44Z
 type: feature
 priority: 1
 assignee: Adam
+updated: 2026-02-24T13:38:07Z
 ---
 # Exe labels should propagate into result taint
 

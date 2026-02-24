@@ -6,7 +6,8 @@ created: 2026-02-20T01:13:20Z
 type: task
 priority: 3
 assignee: Adam Avenir
-updated: 2026-02-20T01:13:26Z
+updated: 2026-02-23T23:37:50Z
+links: 
 ---
 # Update skills and examples in plugins/ to match orchestrator conventions
 
