@@ -1,13 +1,13 @@
 ---
 id: m-8edd
-status: open
+status: closed
 deps: []
 created: 2026-02-23T16:43:59Z
 type: bug
 priority: 0
 assignee: Adam Avenir
 tags: [docs, gotchas]
-updated: 2026-02-23T16:44:10Z
+updated: 2026-02-25T00:44:19Z
 ---
 # Fix incomplete truthiness table in gotchas doc
 

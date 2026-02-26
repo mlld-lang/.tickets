@@ -13,17 +13,35 @@ links:
 
 ## Context
 
-After implementing the llm/ improvements (shared libraries, output conventions, config patterns, path aliases), the skills and examples in plugins/ should be updated to reflect the new conventions.
+After shared libraries (m-5870, m-3f0b, m-fd36, m-a3fe), output migration (m-9bab), and review generalization (m-5c21) are complete, the skills and examples in `plugins/` need updating to match.
 
-## Work
+## Source files to update
 
-1. Review all skills in plugins/ that reference orchestrator patterns
-2. Update examples to use @lib/ imports instead of local duplicates
-3. Update examples to use @output/ for run output
-4. Update scaffold/example skills to follow conventions from llm/CONVENTIONS.md
-5. Ensure any orchestrator-related skills demonstrate the config-driven pattern where applicable
+Check all files in:
+- `plugins/mlld/skills/orchestrator/` — the orchestrator scaffold skill
+- `plugins/mlld/skills/` — any other skills that generate or reference orchestrator code
+- Any example `.mld` files in `plugins/` that show orchestrator patterns
 
-## Dependency
+## Required changes
 
-This should be done AFTER the shared library extraction, output migration, and review generalization are complete.
+1. **Scaffold skill** (`plugins/mlld/skills/orchestrator/`): Update generated scaffolds to use:
+   - `import { @mkdirp, @fileExists } from @lib/common`
+   - `import { @logEvent, @logPhaseStart, @logPhaseComplete } from @lib/events`
+   - `import { @resolveOutputDir } from @lib/runs`
+   - `@output/` for run output (not custom `@base/` paths)
+   - Config-driven pattern from CONVENTIONS.md where applicable
+
+2. **Example code in SKILL.md files**: Update any inline examples that show:
+   - Local `exe @mkdirp` definitions → import from `@lib/common`
+   - Custom output paths → `@resolveOutputDir`
+   - Inline event logging → import from `@lib/events`
+
+3. **Remove stale patterns**: Any examples that show the old output conventions (custom `runs/` paths, `@base/pipeline/`, etc.) should be updated.
+
+## Acceptance criteria
+
+- Scaffold skill generates code that uses `@lib/` imports.
+- No skill or example shows locally-defined `@mkdirp`, `@fileExists`, or `@flatName`.
+- Example output paths use `@output/` convention.
+- All skills pass `mlld validate` (if applicable).
 

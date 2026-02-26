@@ -1,13 +1,13 @@
 ---
 id: m-5fa8
-status: open
+status: closed
 deps: []
 created: 2026-02-20T16:05:53Z
 type: task
 priority: 2
 assignee: Adam Avenir
 tags: [severity-medium, pre-ga]
-updated: 2026-02-20T16:05:59Z
+updated: 2026-02-24T21:02:53Z
 ---
 # Add hook naming syntax to reference docs
 

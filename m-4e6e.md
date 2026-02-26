@@ -1,13 +1,13 @@
 ---
 id: m-4e6e
-status: open
+status: closed
 deps: []
 created: 2026-02-23T16:39:50Z
 type: bug
 priority: 0
 assignee: Adam Avenir
 tags: [grammar, escaping, cmd]
-updated: 2026-02-23T16:39:53Z
+updated: 2026-02-24T18:27:30Z
 ---
 # Audit and fix all @ escaping — \@ should produce literal @ everywhere
 

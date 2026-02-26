@@ -1,13 +1,13 @@
 ---
 id: m-f9b2
-status: open
+status: closed
 deps: []
 created: 2026-02-23T16:43:53Z
 type: bug
 priority: 0
 assignee: Adam Avenir
 tags: [interpreter, js, builtins]
-updated: 2026-02-23T16:44:08Z
+updated: 2026-02-24T18:27:31Z
 ---
 # js block-body lambdas break implicit return — kills @sortBy/@groupBy
 

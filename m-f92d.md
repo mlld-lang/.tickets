@@ -1,13 +1,13 @@
 ---
 id: m-f92d
-status: open
+status: closed
 deps: []
 created: 2026-02-23T16:34:23Z
 type: bug
 priority: 0
 assignee: Adam Avenir
 tags: [docs, gotchas]
-updated: 2026-02-23T16:34:29Z
+updated: 2026-02-24T18:27:30Z
 ---
 # Document that <@var> triggers file loading, not text output
 
