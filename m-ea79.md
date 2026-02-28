@@ -1,11 +1,12 @@
 ---
 id: m-ea79
-status: open
+status: closed
 deps: []
 created: 2026-02-17T01:42:11Z
 type: bug
 priority: 2
-assignee: Adam
+assignee: codex
+updated: 2026-02-27T06:48:40Z
 ---
 # Markdown-mode validator picks up :: and ::: template delimiters in prose
 

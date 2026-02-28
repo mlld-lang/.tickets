@@ -1,13 +1,13 @@
 ---
 id: m-12ed
-status: open
+status: closed
 deps: []
 created: 2026-02-12T01:22:01Z
 type: bug
 priority: 2
-assignee: Adam
+assignee: codex
 tags: [grammar, error-messages, dx]
-updated: 2026-02-12T01:22:11Z
+updated: 2026-02-27T06:48:40Z
 ---
 # Clarify error for for...when with static condition
 

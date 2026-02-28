@@ -1,14 +1,14 @@
 ---
 id: m-0cd3
-status: open
+status: closed
 deps: []
 links: [m-2449]
 created: 2026-02-23T04:39:59Z
 type: bug
 priority: 0
-assignee: Adam
+assignee: codex
 tags: [security, env, labels]
-updated: 2026-02-23T05:02:49Z
+updated: 2026-02-27T06:48:40Z
 ---
 # Design: env block return expressions bypass tool collection label scope
 

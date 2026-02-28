@@ -1,11 +1,12 @@
 ---
 id: m-f3c6
-status: open
+status: closed
 deps: []
 created: 2026-02-25T19:15:37Z
 type: chore
 priority: 3
-assignee: Adam Avenir
+assignee: codex
+updated: 2026-02-27T06:48:40Z
 ---
 # Refactor FileProcessor to reduce duplication
 

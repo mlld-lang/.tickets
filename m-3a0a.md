@@ -1,11 +1,12 @@
 ---
 id: m-3a0a
-status: open
+status: closed
 deps: []
 created: 2026-02-25T19:48:44Z
 type: chore
 priority: 0
-assignee: Adam Avenir
+assignee: codex
+updated: 2026-02-27T06:38:10Z
 ---
 # Clean up stale Prettier references
 

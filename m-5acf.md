@@ -1,6 +1,6 @@
 ---
 id: m-5acf
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-02-24T10:19:31Z
@@ -8,6 +8,7 @@ type: task
 priority: 2
 assignee: Adam
 tags: [docs, atoms]
+updated: 2026-02-27T04:51:40Z
 ---
 # Make atom ordering less brittle
 

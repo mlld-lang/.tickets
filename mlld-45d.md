@@ -1,12 +1,13 @@
 ---
 id: mlld-45d
-status: open
+status: closed
 deps: []
 links: []
 created: 2025-12-17T17:58:16.983003-08:00
 type: feature
 priority: 4
 tags: [size-s, complexity-m, risk-m, impl-none]
+updated: 2026-02-27T04:51:40Z
 ---
 # Optimize @exists() for file paths to avoid loading content
 

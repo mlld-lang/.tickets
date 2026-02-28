@@ -1,11 +1,12 @@
 ---
 id: m-e1f7
-status: open
+status: closed
 deps: []
 created: 2026-02-25T19:58:56Z
 type: bug
 priority: 0
-assignee: Adam Avenir
+assignee: codex
+updated: 2026-02-27T06:48:40Z
 ---
 # @now resolver ignores custom format strings
 

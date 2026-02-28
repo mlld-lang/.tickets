@@ -1,12 +1,13 @@
 ---
 id: mlld-dk4
-status: open
+status: closed
 deps: [mlld-76c]
 links: []
 created: 2025-12-13T05:31:59.470602-08:00
 type: bug
 priority: 2
 tags: [size-s, complexity-s, risk-s, impl-partial]
+updated: 2026-02-27T04:51:39Z
 ---
 # Object keys should match JavaScript key highlighting
 

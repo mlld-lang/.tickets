@@ -1,12 +1,12 @@
 ---
 id: m-b6a9
-status: open
+status: closed
 deps: [m-1c1f, m-30e4, m-ab2c]
 created: 2026-02-19T21:10:04Z
 type: task
 priority: 0
 assignee: Adam Avenir
-updated: 2026-02-23T23:37:50Z
+updated: 2026-02-27T04:51:38Z
 links: 
 ---
 # Update orchestrator skill docs to teach checkpoint/resume as primary resilience pattern

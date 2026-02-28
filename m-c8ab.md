@@ -1,12 +1,12 @@
 ---
 id: m-c8ab
-status: open
+status: closed
 deps: [m-e510]
 created: 2026-02-10T19:52:00Z
 type: task
 priority: P0
 assignee: Adam
-updated: 2026-02-13T06:35:34Z
+updated: 2026-02-27T04:51:38Z
 ---
 # Rename @json to @parse
 

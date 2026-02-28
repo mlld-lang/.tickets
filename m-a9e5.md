@@ -1,6 +1,6 @@
 ---
 id: m-a9e5
-status: open
+status: closed
 deps: []
 links: []
 created: 2026-02-23T23:37:26Z
@@ -8,7 +8,7 @@ type: task
 priority: 4
 assignee: Adam
 tags: [docs, atoms]
-updated: 2026-02-23T23:56:20Z
+updated: 2026-02-27T04:51:38Z
 ---
 # Atom gap fill: streaming, resolvers, CLI, SDK
 

@@ -1,12 +1,12 @@
 ---
 id: m-ab2c
-status: open
+status: closed
 deps: [m-1c1f, m-30e4, m-180f]
 created: 2026-02-19T19:06:43Z
 type: task
 priority: 0
 assignee: Adam Avenir
-updated: 2026-02-19T21:08:56Z
+updated: 2026-02-27T04:51:38Z
 ---
 # Update orchestrators to use built-in checkpoint/resume instead of manual resumption
 

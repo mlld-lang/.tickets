@@ -1,11 +1,12 @@
 ---
 id: m-15de
-status: open
+status: closed
 deps: []
 created: 2026-02-05T21:35:19Z
 type: feature
 priority: 1
 assignee: Adam
+updated: 2026-02-27T04:51:14Z
 ---
 # Environment-mediated MCP via @mcpConfig() and profiles
 

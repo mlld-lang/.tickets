@@ -1,11 +1,12 @@
 ---
 id: m-97ef
-status: open
+status: closed
 deps: []
 created: 2026-02-25T19:58:50Z
 type: bug
 priority: 0
 assignee: Adam Avenir
+updated: 2026-02-27T18:42:36Z
 ---
 # RegistryManager.fetchLocked bypasses lock integrity
 
