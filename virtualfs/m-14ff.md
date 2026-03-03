@@ -1,12 +1,12 @@
 ---
 id: m-14ff
-status: open
+status: closed
 deps: [m-0c26]
 created: 2026-02-18T17:12:20Z
 type: task
 priority: 2
 assignee: Adam Avenir
-updated: 2026-02-18T17:12:20Z
+updated: 2026-03-01T06:51:40Z
 ---
 # Phase 4: Integrate VirtualFS into SDK and interpreter surfaces
 
