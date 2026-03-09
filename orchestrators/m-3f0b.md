@@ -7,79 +7,172 @@ type: task
 priority: 2
 assignee: Adam Avenir
 ---
-# Create llm/lib/events.mld shared library
+# Create publishable `@mlld/event-log` module
 
 ## Problem
 
-Event logging is duplicated across orchestrators. QA (`llm/run/qa/lib/events.mld`) and Polish (`llm/run/polish/lib/events.mld`) have nearly identical core functions. Other orchestrators have inline event logging with a different signature.
+Append-only `events.jsonl` logging is now a real orchestration primitive, not just a pre-checkpoint resume workaround.
+
+Checkpoint/resume replaced the old custom run-state machinery, but several orchestrators still rely on event logs for:
+
+- workflow memory (`what already happened in this run?`)
+- coordination (`what still needs merge / docs / follow-up?`)
+- agent context (`recent events` fed back into a decision prompt)
+- audit/debugging (`why did this run pause or fail?`)
+
+The core event-log IO is duplicated today:
+
+- QA has local `logEvent/loadEvents` helpers
+- Polish has the same core helpers plus Polish-specific workflow queries
+- J2BD has its own `logEvent` and `loadRecentEvents`
+- qatest2 has another thin `logEvent`
+
+What should be shared is the **event-log primitive**, not a single orchestrator-wide event schema.
 
 ## Source implementations
 
-**QA events** (`llm/run/qa/lib/events.mld`) — 44 lines, exports 6 functions:
-- `@logEvent(runDir, event)` — core: appends `{ ts: @now, ...@event }` to `events.jsonl`
-- `@logPhaseStart(runDir, phase)`
-- `@logPhaseComplete(runDir, phase, extra)`
-- `@logItemStart(runDir, id, itemType)`
-- `@logItemDone(runDir, id, status, extra)`
-- `@loadEvents(runDir)`
+**QA events** (`llm/run/qa/lib/events.mld`)
+- `@logEvent(runDir, event)` appends `{ ts: @now, ...@event }` to `events.jsonl`
+- `@loadEvents(runDir)` reads the full file
+- wraps those with QA-specific helpers like `@logPhaseStart` / `@logItemDone`
 
-**Polish events** (`llm/run/polish/lib/events.mld`) — 126 lines, identical core + 9 extra functions:
-- Same 6 core functions (identical to QA)
-- Polish-specific extensions: `@logBatchStart`, `@logBatchDone`, `@logMergeDone`, `@logMergeFailed`, `@logManualReview`, `@getCompletedItems`, `@getExecuteCompletedItems`, `@getVerifiedNotMerged`
+**Polish events** (`llm/run/polish/lib/events.mld`)
+- same core `@logEvent` / `@loadEvents`
+- adds Polish-only wrappers and query helpers:
+  `@logBatchStart`, `@logBatchDone`, `@logMergeDone`, `@logMergeFailed`,
+  `@logManualReview`, `@getCompletedItems`, `@getExecuteCompletedItems`,
+  `@getVerifiedNotMerged`
+
+**J2BD**
+- `llm/run/j2bd/lib/questions.mld` has a separate `@logEvent(runDir, eventType, data)`
+- `llm/run/j2bd/lib/context.mld` has `@loadRecentEvents(runDir, limit)`
+- event names are J2BD-specific (`iteration`, `worker_result`, `run_paused`, `job_complete`)
+
+**qatest2**
+- `llm/run/qatest2/lib/context.mld` has another thin `@logEvent`
 
 ## Required change
 
-### Step 1: Create `llm/lib/events.mld`
+### Step 1: Create `modules/event-log/`
 
-Copy `llm/run/qa/lib/events.mld` to `llm/lib/events.mld`. This becomes the shared core with the 6 exported functions. The file is already well-structured — no changes needed to the code itself, just the new location.
+Create a publishable library module:
 
-### Step 2: Update QA
-
-In `llm/run/qa/index.mld`, the existing import line is:
-```mlld
->> (QA imports events from its own lib — find the import or inline usage)
+```text
+modules/event-log/
+├── index.mld
+├── module.yml
+└── README.md
 ```
 
-Change QA's events import to `@lib/events`:
+This module will be published as `@mlld/event-log`.
+
+`module.yml` should use normal module packaging metadata for a public library module.
+
+### Step 2: Shared API surface
+
+Export only the cross-orchestrator primitives:
+
+- `@logEvent(runDir, event)`
+- `@loadEvents(runDir)`
+- `@loadRecentEvents(runDir, limit)`
+
+Expected behavior:
+
+- `@logEvent(runDir, event)`
+  - accepts a full event object, not `(eventType, data)`
+  - writes `{ ts: @now, ...@event }` to `@runDir/events.jsonl`
+  - returns the event object that was written
+- `@loadEvents(runDir)`
+  - returns parsed JSONL entries in file order
+  - returns `[]` if the file does not exist
+- `@loadRecentEvents(runDir, limit)`
+  - returns the last `limit` parsed events
+  - returns `[]` if the file does not exist
+  - can be implemented via `@loadEvents(...).slice(...)` unless there is a strong reason to optimize around `tail`
+
+Do **not** put orchestrator-specific event names or workflow query helpers in this shared module.
+
+### Step 3: Update QA to consume the module
+
+Refactor `llm/run/qa/lib/events.mld` so it imports the shared primitives from the module and keeps only QA-specific wrappers:
+
 ```mlld
-import { @logEvent, @logPhaseStart, @logPhaseComplete, @logItemStart, @logItemDone, @loadEvents } from @lib/events
+import {
+  @logEvent,
+  @loadEvents
+} from <@root/modules/event-log/index.mld>
 ```
 
-Delete `llm/run/qa/lib/events.mld` after confirming QA works with the shared import.
+Keep local QA helpers like:
 
-### Step 3: Update Polish
+- `@logPhaseStart`
+- `@logPhaseComplete`
+- `@logItemStart`
+- `@logItemDone`
 
-Replace Polish's events.mld with a file that imports the shared core and adds its extensions:
+Delete duplicated core implementations from QA's local file.
+
+### Step 4: Update Polish to consume the module
+
+Refactor `llm/run/polish/lib/events.mld` so it imports:
 
 ```mlld
->> Events Library (Polish extensions)
->> Core logging imported from @lib/events, Polish-specific extensions below
-
-import { @logEvent, @logPhaseStart, @logPhaseComplete, @logItemStart, @logItemDone, @loadEvents } from @lib/events
-
->> Polish-specific extensions below (batch, merge, manual review, query helpers)
-exe @logBatchStart(runDir, count) = [
-  => @logEvent(@runDir, { event: "batch_start", count: @count })
-]
->> ... (keep all Polish-specific functions as-is)
-
-/export {
-  @logEvent, @logPhaseStart, @logPhaseComplete, @logItemStart, @logItemDone, @loadEvents,
-  @logBatchStart, @logBatchDone, @logMergeDone, @logMergeFailed, @logManualReview,
-  @getCompletedItems, @getExecuteCompletedItems, @getVerifiedNotMerged
-}
+import {
+  @logEvent,
+  @loadEvents,
+  @loadRecentEvents
+} from <@root/modules/event-log/index.mld>
 ```
 
-Polish's phases continue importing from `./lib/events.mld` — they get the shared core re-exported plus Polish extensions.
+Keep Polish-specific wrappers and query helpers local:
 
-### Step 4: Other orchestrators
+- phase/item/batch logging wrappers
+- merge/manual-review wrappers
+- `@getCompletedItems`
+- `@getExecuteCompletedItems`
+- `@getVerifiedNotMerged`
 
-Other orchestrators (review, doc-audit, j2bd, qatest2) have inline event logging with different signatures. Do NOT update them in this ticket — they can be migrated individually later or as part of m-9bab.
+Polish phases should continue importing from `./lib/events.mld`; that file becomes the Polish adapter layer on top of the shared module.
+
+### Step 5: Optionally migrate J2BD / qatest2 in the same ticket if low-friction
+
+If the migration is straightforward, update:
+
+- `llm/run/j2bd/lib/questions.mld`
+- `llm/run/j2bd/lib/context.mld`
+- `llm/run/qatest2/lib/context.mld`
+
+to consume the shared primitives.
+
+Important: J2BD's event schema should remain J2BD-specific. Only the file IO helpers should be shared.
+
+If this expands scope too much, split J2BD/qatest2 into a follow-up.
+
+### Step 6: Publish intent
+
+The module should be structured so it can be published as:
+
+```mlld
+import { @logEvent, @loadEvents, @loadRecentEvents } from @mlld/event-log
+```
+
+Repo-local consumers may use `<@root/modules/event-log/index.mld>` until the module is actually published.
 
 ## Acceptance criteria
 
-- `llm/lib/events.mld` exists with 6 core functions exported.
-- QA imports events from `@lib/events` (not local `./lib/events.mld`).
-- Polish's `lib/events.mld` imports core from `@lib/events` and adds its extensions.
-- QA and Polish orchestrators still function correctly.
+- `modules/event-log/` exists with `index.mld`, `module.yml`, and `README.md`
+- the module exports exactly the shared event-log primitives:
+  - `@logEvent`
+  - `@loadEvents`
+  - `@loadRecentEvents`
+- QA consumes the shared primitive module and keeps only QA-specific wrappers locally
+- Polish consumes the shared primitive module and keeps only Polish-specific wrappers/query helpers locally
+- no orchestrator-specific event taxonomy is forced into the shared module
+- local consumers have a clear migration path to `@mlld/event-log`
 
+## Non-goals
+
+- Standardizing all orchestrators on the same event names
+- Moving Polish workflow query helpers into the shared module
+- Replacing checkpoint/resume
+- Reintroducing old run-state files like `run.json`
